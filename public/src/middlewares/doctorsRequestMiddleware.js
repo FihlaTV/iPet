@@ -4,7 +4,7 @@ const doctorRequestMiddleware = store=> next=> action=> {  // eslint-disable-lin
 
   switch (action.type) {
   case 'INIT':
-    request.get('/doctors')
+    request.get('/api/doctors')
         .end((err, res)=> {
           next({
             type: 'DOCTORS_LOADED',

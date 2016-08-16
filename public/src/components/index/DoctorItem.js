@@ -2,14 +2,14 @@ import React, {Component} from 'react'; // eslint-disable-line no-unused-vars
 
 class DoctorItem extends Component {
   render() {
-    let {name, image, type, hospital} = this.props;
+    let {_id, doctor_name, image, type, hospital} = this.props;// eslint-disable-line no-unused-vars
     return (
-        <div className="doctorList">
+        <div key={_id} className="doctorList">
           <div className="text-center col-xs-2 doctor  thumbnail">
             <a className="text-center" href="#">
               <img src={image} alt="..."/>
             </a>
-            <div>{name}{type}{hospital}</div>
+            <div>{doctor_name}<br/>{type}<br/>{hospital}</div>
           </div>
         </div>
 
