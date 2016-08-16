@@ -8,7 +8,10 @@ class App extends Component {
     return (
         <div>
           <Head/>
-          <div className="mainer">
+          <div className="row mainer">
+            <div className="doctor_head">
+              <h3 className="text-center">Doctor List</h3>
+            </div>
             <DoctorList/>
           </div>
           <Foot/>

@@ -1,5 +1,5 @@
 const regRouter = (app)=> {
-  app.use('/doctors', require('./doctors'));
+  app.use('/api/doctors', require('./doctors'));
 };
 
 export default regRouter;

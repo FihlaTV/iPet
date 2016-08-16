@@ -11,7 +11,7 @@ router.get('/', (req, res)=> {
 
 router.get('/:id', (req, res)=> {
   Doctor.findOne({
-    id: req.params.id
+    _id: req.params.id
   }, (err, data)=> {
     res.send(data);
   });
