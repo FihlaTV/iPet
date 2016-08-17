@@ -1,30 +1,33 @@
 import React,{Component} from 'react';
 class Content extends Component{
 	handleClick(){
+		let userName = this.refs.username;
+		let password = this.refs.password;
+		console.log(userName.value + password.value);
 		alert("aaaa");
 	}
   render(){
     return (
         <div className='login-content'>
           <ul className='user-login-list' id='user-login-list'>
-            <li className='user-login' onClick={this.handleClick}>用户登录</li>
+            <li className='user-login'>用户登录</li>
             <li>快速注册</li>
           </ul>
           <ul className='user-login-ul' id='user-login-ul'>
             <li className='user-login-li' id='user-login-li'>
 				<span className='login_username'>
 					<img src='images/login_images/user.png'/>
-					<input type='text' placeholder='用户名'/>
+					<input type='text' ref='username' placeholder='用户名'/>
 				</span>
 				<span className='login_password'>
 					<img src='images/login_images/mima.png'/>
-					<input type='text' placeholder='密码'/>
+					<input type='text' ref='password' placeholder='密码'/>
 				</span>
               <div className='remeber_password'>
                 <span className='remeber_password_span'><input type='checkbox' name='remeber_password' /> 记住密码 </span>
               </div>
 				<span className='login_btn_span'>
-					<button className='login_btn'>登录</button>
+					<button className='login_btn' onClick={this.handleClick.bind(this)}>登录</button>
 				</span>
             </li>
             <li id='user-logup-li'>
