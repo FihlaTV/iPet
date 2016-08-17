@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {render} from 'react-dom';
 import Doctor from './container/Doctor';
-import doctor from './reducers';
+import doctor from './reducers/doctor';
 
 import {createStore, applyMiddleware} from 'redux';
 import {Provider} from 'react-redux';
