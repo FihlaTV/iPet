@@ -1,9 +1,10 @@
 import mongoose from 'mongoose';
 import rawData from './fixture/raw-data';
 import Doctor from '../models/Doctor';
-
+import User from '../models/User';
 const modelsMap = {
-  Doctor
+  Doctor,
+  User
 };
 
 let docs = Object.keys(rawData);
