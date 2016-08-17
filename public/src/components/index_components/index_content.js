@@ -25,7 +25,7 @@ class Content extends Component {
                 <span className='remeber_password_span'><input type='checkbox' name='remeber_password'/> 记住密码 </span>
               </div>
               <span className='login_btn_span'>
-					<button className='login_btn'>登录</button>
+					<button className='login_btn' onClick={this.handleClick}>登录</button>
 				</span>
             </li>
             <li id='user-logup-li'>

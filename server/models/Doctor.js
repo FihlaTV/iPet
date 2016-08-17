@@ -7,7 +7,7 @@ const Doctor = mongoose.model('Doctor', {
   email: String,
   type: String,
   hospital: String,
-  certificaties: String
+  certificates: String
 });
 
 export default Doctor;

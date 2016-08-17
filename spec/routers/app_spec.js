@@ -13,7 +13,7 @@ describe('get /api/doctors', ()=> {
             'email': '123456@qq.com',
             'type': '内科',
             'hospital': '北京动物医院',
-            'certificaties': '中级',
+            'certificates': '中级',
             '__v': 0
           },
           {
@@ -23,7 +23,7 @@ describe('get /api/doctors', ()=> {
             'email': '123456@qq.com',
             'type': '外科',
             'hospital': '西安高级动物医院',
-            'certificaties': '中级',
+            'certificates': '中级',
             '__v': 0
           },
           {
@@ -33,7 +33,7 @@ describe('get /api/doctors', ()=> {
             'email': '123456@qq.com',
             'type': '内科',
             'hospital': '北京中级动物医院',
-            'certificaties': '中级',
+            'certificates': '中级',
             '__v': 0
           },
           {
@@ -43,7 +43,7 @@ describe('get /api/doctors', ()=> {
             'email': '123456@qq.com',
             'type': '内科',
             'hospital': '北京中高级动物医院',
-            'certificaties': '中级',
+            'certificates': '中级',
             '__v': 0
           },
           {
@@ -53,7 +53,7 @@ describe('get /api/doctors', ()=> {
             'email': '123456@qq.com',
             'type': '内科',
             'hospital': '西安中高级动物医院',
-            'certificaties': '中级',
+            'certificates': '中级',
             '__v': 0
           },
           {
@@ -63,7 +63,7 @@ describe('get /api/doctors', ()=> {
             'email': '123456@qq.com',
             'type': '内科',
             'hospital': '杭州宠物医院',
-            'certificaties': '中级',
+            'certificates': '中级',
             '__v': 0
           },
           {
@@ -73,7 +73,7 @@ describe('get /api/doctors', ()=> {
             'email': '123456@qq.com',
             'type': '内科',
             'hospital': '南京高级宠物医院',
-            'certificaties': '中级',
+            'certificates': '中级',
             '__v': 0
           },
           {
@@ -83,7 +83,7 @@ describe('get /api/doctors', ()=> {
             'email': '123456@qq.com',
             'type': '内科',
             'hospital': '北京高级动物医院',
-            'certificaties': '中级',
+            'certificates': '中级',
             '__v': 0
           },
           {
@@ -93,7 +93,7 @@ describe('get /api/doctors', ()=> {
             'email': '123456@qq.com',
             'type': '内科',
             'hospital': '北京动物医院',
-            'certificaties': '中级',
+            'certificates': '中级',
             '__v': 0
           },
           {
@@ -103,7 +103,7 @@ describe('get /api/doctors', ()=> {
             'email': '123456@qq.com',
             'type': '内科',
             'hospital': '北京中级动物医院',
-            'certificaties': '中级',
+            'certificates': '中级',
             '__v': 0
           },
           {
@@ -113,7 +113,7 @@ describe('get /api/doctors', ()=> {
             'email': '123456@qq.com',
             'type': '内科',
             'hospital': '北京动物医院',
-            'certificaties': '中级',
+            'certificates': '中级',
             '__v': 0
           }
         ])
@@ -138,7 +138,7 @@ describe('get /api/doctors:id', ()=> {
           'email': '123456@qq.com',
           'type': '内科',
           'hospital': '北京动物医院',
-          'certificaties': '中级',
+          'certificates': '中级',
           '__v': 0
         })
         .end((err)=> {

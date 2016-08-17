@@ -1,5 +1,5 @@
-import express from 'express';
-import Doctor from '../models/Doctor';
+import express from "express";
+import Doctor from "../models/Doctor";
 
 let router = express.Router();
 
@@ -15,7 +15,6 @@ router.get('/:id', (req, res)=> {
   }, (err, data)=> {
     if(data) {
       res.send(data);
-
     } else {
       res.sendStatus(404);
     }
