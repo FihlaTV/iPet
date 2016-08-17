@@ -5,6 +5,7 @@ module.exports = {
   entry: {
     vendor: ["react", "react-dom", "./node_modules/bootstrap/dist/css/bootstrap.css"],
     home: ["./public/src/home", "./public/style/home.css"],
+    login : ["./public/src/login", "./public/style/login_style.css"],
   },
   output: {
     path: require('path').resolve("./public/dist"),
