@@ -3,7 +3,7 @@ import React, {Component} from "react";
 class DoctorInfo extends Component {
   render() {
     console.log(this.props);
-    let {doctor_name, image, email, type, hospital, certificaties}=this.props.doctor;
+    let {doctor_name, image, email, type, hospital, certificates}=this.props.doctor;
 
     return (
         <div classID="doctor_info">
@@ -16,7 +16,7 @@ class DoctorInfo extends Component {
             <li>e-mail:{email}</li>
             <li>科室:{type}</li>
             <li>所在医院:{hospital}</li>
-            <li>级别:{certificaties}</li>
+            <li>级别:{certificates}</li>
           </ul>
         </div>)
   }
