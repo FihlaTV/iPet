@@ -13,7 +13,6 @@ const doctorRequestMiddleware = store=> next=> action=> {  // eslint-disable-lin
         });
     break;
   }
-
   next(action);
 };
 

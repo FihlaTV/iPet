@@ -153,7 +153,7 @@ describe('get /api/doctors:id', ()=> {
   it('should return null', (done)=> {
     request(app)
         .get('/api/doctors/57b2c7b9d8e1ecbf54300080')
-        .expect('')
+        .expect(404)
         .end((err)=> {
           if (err) {
             done.fail(err);
