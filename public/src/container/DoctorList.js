@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import Doctors from '../components/index/Doctors';
+import Doctors from '../components/home/Doctors';
 
 const mapStateToProps = (state)=> (state);
 

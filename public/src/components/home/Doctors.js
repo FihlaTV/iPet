@@ -8,7 +8,8 @@ class Doctors extends Component {
         <div className="row scrol">
           {
             doctor.map((v, k)=> (
-                <DoctorItem key={k+1} _id={v._id} doctor_name={v.doctor_name} image={v.image} type={v.type} hospital={v.hospital} />
+                <DoctorItem key={k + 1} _id={v._id} doctor_name={v.doctor_name} image={v.image} type={v.type}
+                            hospital={v.hospital}/>
             ))
           }
         </div>

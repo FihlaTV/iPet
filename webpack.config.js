@@ -4,7 +4,7 @@ var webpack = require("webpack");
 module.exports = {
   entry: {
     vendor: ["react", "react-dom", "./node_modules/bootstrap/dist/css/bootstrap.css"],
-    index: ["./public/src/index", "./public/style/index.css"]
+    home: ["./public/src/home", "./public/style/home.css"],
   },
   output: {
     path: require('path').resolve("./public/dist"),
@@ -24,6 +24,7 @@ module.exports = {
         test: /\.css$/, 
         loader: ExtractTextPlugin.extract("style-loader", "css-loader")
       },
+      { test: /\.(png|jpg)$/,loader: 'url-loader?limit=10000'},
       {test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=application/font-woff'},
       {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=application/octet-stream'},
       {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file'},

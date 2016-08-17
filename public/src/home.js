@@ -1,6 +1,6 @@
 import React from 'react'; // eslint-disable-line no-unused-vars
 import {render} from 'react-dom';
-import App from './components/App';
+import App from './components/home/App';
 import doctorList from './reducers';
 
 import {createStore, applyMiddleware} from 'redux';
