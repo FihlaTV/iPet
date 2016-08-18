@@ -9,6 +9,18 @@ router.get('/', (req, res)=> {
   });
 });
 
+router.get('/:id', (req, res)=> {
+  User.findOne({
+    _id: req.params.id
+  }, {password:0,__v:0},(err, data)=> {
+    if(data) {
+      res.send(data);
+    } else {
+      res.sendStatus(404);
+    }
+  });
+});
+
 router.get('/:username&:password', (req, res)=> {
   User.findOne({
     username: req.params.username,

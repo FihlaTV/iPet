@@ -7,6 +7,9 @@ const resultList = combineReducers({
   doctors,
   messages
   // doctor
+}
+const resultList = combineReducers({
+  doctors
 });
 
 export default resultList;

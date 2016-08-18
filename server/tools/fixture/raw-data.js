@@ -94,13 +94,15 @@ export default {
       _id: '47b2c7b9d8e1ecbf54300010',
       username: 'hanzi',
       password: '123456',
-      email: '515161153@qq.com'
+      email: '515161153@qq.com',
+      description: 'lol i love dog'
     },
     {
       _id: '47b2c7b9d8e1ecbf54300011',
       username: 'hanzi22',
       password: '123456',
       email: '515161153@qq.com'
+      description: 'lol i love dog'
     },
     {
       _id: '47b2c7b9d8e1ecbf54300012',
@@ -130,7 +132,9 @@ export default {
       talk: [{
         isQuestion: true,
         msg: '问:问题3?<br/>'
-      }]
+      }],
+      email: '515161153@qq.com',
+      description: 'lol i love dog'
     }
   ]
 };
