@@ -3,6 +3,12 @@ import Doctors from '../components/home/Doctors';
 
 const mapStateToProps = (state)=> (state);
 
-const DoctorList = connect(mapStateToProps)(Doctors);
+const mapDispatchToProps = (dispacth) => ({
+  doctorInit: (doctor_id) => {
+    dispacth(doctorInit(doctor_id));
+  }
+});
+
+const DoctorList = connect(mapStateToProps, mapDispatchToProps)(Doctors);
 
 export default DoctorList;

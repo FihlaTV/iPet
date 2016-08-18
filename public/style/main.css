@@ -1,3 +1,13 @@
+li{
+    list-style: none;
+}
+
+.doctor_img{
+    width:100px;
+    height:100px;
+}
+
+/*=========================*/
 
 * {
     padding: 0;
@@ -35,7 +45,7 @@
     margin-left: 25px;
     font-weight: bold;
     color: #8a6d3b;
-    font-family: å¹¼å›­;
+    font-family: Ó×Ô°;
 }
 
 .headRight {
@@ -70,7 +80,7 @@
     margin: 25px 0 0 20px;
     float: left;
     font-size: 17px;
-    font-family: å¹¼å›­;
+    font-family: Ó×Ô°;
     cursor: pointer;
 }
 .headRight .logIn:hover {

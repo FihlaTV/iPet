@@ -1,10 +1,10 @@
 import {combineReducers} from 'redux';
 import doctors from './doctors';
-// import doctor from './doctor';
+import doctor from './doctor';
 
 const resultList = combineReducers({
-  doctors
-  // doctor
+  doctors,
+  doctor
 });
 
 export default resultList;

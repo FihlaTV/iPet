@@ -7,7 +7,7 @@ const doctorRequestMiddleware = store=> next=> action=> {  // eslint-disable-lin
     request.get('/api/doctors')
         .end((err, res)=> {
           next({
-            type: 'DOCTORS_LOADED',
+            type: 'DOCTORS_LOAD',
             data: res.body
           });
         });

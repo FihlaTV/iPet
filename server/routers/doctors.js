@@ -10,6 +10,7 @@ router.get('/', (req, res)=> {
 });
 
 router.get('/:id', (req, res)=> {
+  console.log(req.params.id)
   Doctor.findOne({
     _id: req.params.id
   }, (err, data)=> {

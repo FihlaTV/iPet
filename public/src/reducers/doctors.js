@@ -1,7 +1,7 @@
-const doctors = (state=[], action)=> {
+const doctors = (state = [], action)=> {
   switch (action.type) {
-  case 'DOCTORS_LOADED':
-    return action.data;
+    case 'DOCTORS_LOAD':
+      return action.data;
   }
   return state;
 };

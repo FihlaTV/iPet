@@ -5,11 +5,12 @@ import request from "superagent";
 
 const doctorRequestMiddleware = store =>next =>action=> {
   switch (action.type) {
-    case 'INIT':
-      request.get('/api/doctors/57b2c7b9d8e1ecbf54300000')
+    case 'DOCTOR_INIT':
+      console.log(action.doctor_id +'==============')
+      request.get('/api/doctors/'+action.doctor_id)
           .end((err, res)=> {
             next({
-              type: 'DOCTOR_LOADED',
+              type: 'SHOW_INFO',
               data: res.body
             });
           });
@@ -17,21 +18,5 @@ const doctorRequestMiddleware = store =>next =>action=> {
   }
   next(action);
 };
-// const doctorRequestMiddleware = store=> next=> action=> {  // eslint-disable-line no-unused-vars
-//
-//   switch (action.type) {
-//     case 'INIT':
-//       request.get('/api/doctors')
-//           .end((err, res)=> {
-//             next({
-//               type: 'DOCTOR_LOADED',
-//               data: res.body
-//             });
-//           });
-//       break;
-//   }
-//
-//   next(action);
-// };
-//
- export default doctorRequestMiddleware;
+
+export default doctorRequestMiddleware;
