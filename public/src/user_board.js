@@ -1,24 +1,27 @@
-import React, {Component} from 'react';
+/**
+ * Created by zhangyiru on 16-8-17.
+ */
+import React from 'react'; // eslint-disable-line no-unused-vars
 import {render} from 'react-dom';
-import Doctor from './container/Doctor';
-import doctor from './reducers/doctor';
+import UserMsgBoardApp from './components/user_board/UserMsgBoardApp';
+import resultList from './reducers';
 
 import {createStore, applyMiddleware} from 'redux';
 import {Provider} from 'react-redux';
-import doctorRequestMiddleware from './middlewares/doctorRequestMiddleware';
+import userRequestMiddleware from './middlewares/userRequestMiddleware';
 
 const store = createStore(
-    doctor,
-    applyMiddleware(doctorRequestMiddleware)
+    resultList,
+    applyMiddleware(userRequestMiddleware)
 );
 
 store.dispatch({
-  type : 'INIT'
+  type: 'INIT'
 });
 
-render (
+render(
     <Provider store={store}>
-     <Doctor/>
+      <UserMsgBoardApp/>
     </Provider>,
     document.getElementById('app')
 );

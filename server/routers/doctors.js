@@ -13,7 +13,7 @@ router.get('/:id', (req, res)=> {
   Doctor.findOne({
     _id: req.params.id
   }, (err, data)=> {
-    if(data) {
+    if (data) {
       res.send(data);
     } else {
       res.sendStatus(404);

@@ -18,20 +18,19 @@ router.put('/', (req, res)=> {
   Message.findById(req.query.id, (err, message)=> {
     message.talk.push(req.body);
     Message.update({_id: message._id}, message, (err, data)=> {
-      console.log(message.talk);
       res.send({
         error: err,
-        data:message.talk
+        data: message.talk
       });
     });
   });
 });
 
-router.get('/find',(req,res)=>{
-  Message.findById(req.query.id,(err,message)=>{
+router.get('/find', (req, res)=> {
+  Message.findById(req.query.id, (err, message)=> {
     res.send({
-      error:err,
-      data:message
+      error: err,
+      data: message
     });
   });
 });
