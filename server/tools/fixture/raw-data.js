@@ -89,24 +89,48 @@ export default {
     certificates: '中级'
   }
   ],
-  User:[
-      {
-    _id:'47b2c7b9d8e1ecbf54300010',
-    username:'hanzi',
-    password:'123456',
-    email:'515161153@qq.com'
-  },
+  User: [
     {
-      _id:'47b2c7b9d8e1ecbf54300011',
-      username:'hanzi22',
-      password:'123456',
-      email:'515161153@qq.com'
+      _id: '47b2c7b9d8e1ecbf54300010',
+      username: 'hanzi',
+      password: '123456',
+      email: '515161153@qq.com'
     },
     {
-      _id:'47b2c7b9d8e1ecbf54300012',
-      username:'hanzi12',
-      password:'123456',
-      email:'515161153@qq.com'
+      _id: '47b2c7b9d8e1ecbf54300011',
+      username: 'hanzi22',
+      password: '123456',
+      email: '515161153@qq.com'
     },
+    {
+      _id: '47b2c7b9d8e1ecbf54300012',
+      username: 'hanzi12',
+      password: '123456',
+      email: '515161153@qq.com'
+    }],
+
+  Message: [
+    {
+      userId: 1,
+      doctorId: 2,
+      talk: [{
+        isQuestion: true,
+        msg: '问:你好?<br/>'
+      }]
+    }, {
+      userId: 2,
+      doctorId: 2,
+      talk: [{
+        isQuestion: true,
+        msg: '问:问题1?<br/>'
+      }]
+    }, {
+      userId: 3,
+      doctorId: 2,
+      talk: [{
+        isQuestion: true,
+        msg: '问:问题3?<br/>'
+      }]
+    }
   ]
 };
