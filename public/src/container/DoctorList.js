@@ -4,12 +4,6 @@ import { doctorInit } from '../actions/doctorInit';
 
 const mapStateToProps = (state)=> (state);
 
-const mapDispatchToProps = (dispacth) => ({
-  doctorInit: (doctor_id) => {
-    dispacth(doctorInit(doctor_id));
-  }
-});
-
-const DoctorList = connect(mapStateToProps, mapDispatchToProps)(Doctors);
+const DoctorList = connect(mapStateToProps)(Doctors);
 
 export default DoctorList;
