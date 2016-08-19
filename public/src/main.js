@@ -30,7 +30,7 @@ render(
       <Router history={browserHistory}>
 
         <Route path='/home' component={App}/>
-        <Route path='/user_board' component={DoctorInfo}/>
+        <Route path='/user_board/:doctor_id' component={DoctorInfo}/>
 
       </Router>
 

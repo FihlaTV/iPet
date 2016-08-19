@@ -6,7 +6,7 @@ import app from '../../app';
 import request from 'supertest';
 
 describe('put /messages ', ()=> {
-  fit('should update talk with one message', (done)=> {
+  it('should update talk with one message', (done)=> {
     request(app)
         .put('/api/messages')
         .type('form')
