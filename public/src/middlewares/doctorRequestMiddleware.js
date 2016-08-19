@@ -6,7 +6,6 @@ import request from "superagent";
 const doctorRequestMiddleware = store =>next =>action=> {
   switch (action.type) {
     case 'DOCTOR_INIT':
-      console.log(action.doctor_id +'==============')
       request.get('/api/doctors/'+action.doctor_id)
           .end((err, res)=> {
             next({
@@ -16,7 +15,7 @@ const doctorRequestMiddleware = store =>next =>action=> {
           });
       break;
   }
-  next(action);
+   next(action);
 };
 
 export default doctorRequestMiddleware;

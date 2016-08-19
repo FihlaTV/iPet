@@ -4,6 +4,7 @@
 import {Router, Route, browserHistory} from 'react-router';
 import React from 'react';
 import {render} from 'react-dom';
+import createLogger from 'redux-logger';//¥Ú”°»’÷æ
 
 import App from './components/home/App';
 import DoctorInfo from './container/Doctor';
@@ -16,11 +17,11 @@ import doctorRequestMiddleware from './middlewares/doctorRequestMiddleware';
 
 const store = createStore(
     doctorList,
-    applyMiddleware(doctorsRequestMiddleware, doctorRequestMiddleware)
+    applyMiddleware(createLogger(), doctorsRequestMiddleware, doctorRequestMiddleware)
 );
 
 store.dispatch({
-  type: 'INIT'
+  type: 'DOCTORS_INIT'
 });
 
 render(

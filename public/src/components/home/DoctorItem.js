@@ -1,4 +1,5 @@
 import React, {Component} from 'react'; // eslint-disable-line no-unused-vars
+import {Link} from 'react-router'
 
 class DoctorItem extends Component {
 
@@ -11,9 +12,9 @@ class DoctorItem extends Component {
     return (
         <div key={_id} className="doctorList">
           <div className='text-center col-xs-2 doctor  thumbnail'>
-            <a className='text-center' onClick={this.doctorInit.bind(this)} href='http://localhost:3000/user_board'>
+            <Link className='text-center' onClick={this.doctorInit.bind(this)} to='user_board'>
               <img src={image} alt='Ò½ÉúÕÕÆ¬'/>
-            </a>
+            </Link>
             <div>{doctor_name}<br/>{type}<br/>{hospital}</div>
           </div>
         </div>

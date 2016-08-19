@@ -3,16 +3,9 @@
  */
 import {connect} from 'react-redux';
 import Doctor from '../components/user_board/DoctorInfo';
-import {doctorInit} from '../actions/doctorInit';
 
 const mapStateToProps = (state)=> (state);
 
-const mapDispatchToProps = (dispacth) => ({
-  doctorInit: (doctor_id) => {
-    dispacth(doctorInit(doctor_id));
-  }
-});
-
-const DoctorInfo = connect(mapStateToProps, mapDispatchToProps)(Doctor);
+const DoctorInfo = connect(mapStateToProps)(Doctor);
 
 export default DoctorInfo;
