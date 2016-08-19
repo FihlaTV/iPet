@@ -7,13 +7,12 @@ li{
     height:100px;
 }
 
-/*=========================*/
-
 * {
     padding: 0;
     margin: 0;
 }
 
+/******************首页的head样式************************/
 .head {
     width: 100%;
     height: 90px;
@@ -83,15 +82,20 @@ li{
     font-family: ��԰;
     cursor: pointer;
 }
+
 .headRight .logIn:hover {
     color: #2aabd2;
 }
-.doctor_list{
+
+.doctor_list {
     width: 70%;
     float: left;
 }
 
-.footer{
+/******************首页的content样式************************/
+
+/******************首页的foot样式************************/
+.footer {
     width: 100%;
     height: 30px;
     text-align: center;
@@ -124,4 +128,9 @@ li{
 .doctor {
     margin-bottom: 30px;
     margin-right: 27px;
+}
+textarea{
+    width:500px;
+    height:150px;
+    margin-top:15px;
 }

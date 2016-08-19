@@ -1,7 +1,7 @@
 /**
  * Created by myc on 8/17/16.
  */
-import request from "superagent";
+import request from 'superagent';
 
 const doctorRequestMiddleware = store =>next =>action=> {
   switch (action.type) {

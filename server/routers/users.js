@@ -9,20 +9,32 @@ router.get('/', (req, res)=> {
   });
 });
 
+router.get('/:id', (req, res)=> {
+  User.findOne({
+    _id: req.params.id
+  }, {password:0,__v:0},(err, data)=> {
+    if(data) {
+      res.send(data);
+    } else {
+      res.sendStatus(404);
+    }
+  });
+});
+
 router.get('/:username&:password', (req, res)=> {
   User.findOne({
-    username:req.params.username,
-    password:req.params.password
+    username: req.params.username,
+    password: req.params.password
   }, (err, data)=> {
-    if(data) {
+    if (data) {
       res.send({
-        result:true,
-        user_id:data._id
+        result: true,
+        user_id: data._id
       });
     } else {
       res.send({
-        result:false,
-        user_id:null
+        result: false,
+        user_id: null
       });
     }
 
