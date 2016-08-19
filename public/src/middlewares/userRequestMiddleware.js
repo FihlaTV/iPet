@@ -1,9 +1,6 @@
 /**
  * Created by zhangyiru on 16-8-17.
  */
-/**
- * Created by zhangyiru on 16-8-16.
- */
 
 import request from 'superagent';
 

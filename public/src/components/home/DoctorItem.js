@@ -9,7 +9,7 @@ class DoctorItem extends Component {
         <div key={_id} className="doctorList">
           <div className='text-center col-xs-2 doctor  thumbnail'>
             <Link className='text-center' to={`user_board/${this.props._id}`} >
-              <img src={image} alt='Ò½ÉúÕÕÆ¬'/>
+              <img src={image} alt='åŒ»ç”Ÿç…§ç‰‡'/>
             </Link>
             <div>{doctor_name}<br/>{type}<br/>{hospital}</div>
           </div>

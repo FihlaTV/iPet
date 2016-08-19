@@ -4,7 +4,7 @@
 import {Router, Route, browserHistory} from 'react-router';
 import React from 'react';  // eslint-disable-line no-unused-vars
 import {render} from 'react-dom';
-import createLogger from 'redux-logger';//´òÓ¡ÈÕÖ¾
+import createLogger from 'redux-logger';//æ‰“å°æ—¥å¿—
 
 import App from './components/home/App';
 import DoctorInfo from './container/Doctor';
