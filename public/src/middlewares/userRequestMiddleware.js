@@ -13,7 +13,7 @@ const userRequestMiddleware = store => next => action=> { // eslint-disable-line
     case 'ADD_USER_MSG':
       request.put('/api/messages')
           .type('form')
-          .query({id: '57b56c9319320bac4c28e5cc'})
+          .query({id:'57b6815bf8885d021d874327'})
           .send(action.data)
           .end((err, res)=> {
             next({
