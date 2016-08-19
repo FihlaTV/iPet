@@ -10,7 +10,7 @@ describe('put /messages ', ()=> {
     request(app)
         .put('/api/messages')
         .type('form')
-        .query({id: '57b56c9319320bac4c28e5ce'})
+        .query({id: '57b6815bf8885d021d874325'})
         .send({
           isQuestion: true,
           msg: '问：问题测试'

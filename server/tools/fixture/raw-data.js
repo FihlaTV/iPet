@@ -101,7 +101,7 @@ export default {
       _id: '47b2c7b9d8e1ecbf54300011',
       username: 'hanzi22',
       password: '123456',
-      email: '515161153@qq.com'
+      email: '515161153@qq.com',
       description: 'lol i love dog'
     },
     {
@@ -112,7 +112,7 @@ export default {
     }],
 
   Message: [
-    {
+    { _id:'57b6815bf8885d021d874325',
       userId: 1,
       doctorId: 2,
       talk: [{
@@ -120,21 +120,13 @@ export default {
         msg: '问:你好?<br/>'
       }]
     }, {
+      _id:'57b6815bf8885d021d874327',
       userId: 2,
       doctorId: 2,
       talk: [{
         isQuestion: true,
         msg: '问:问题1?<br/>'
       }]
-    }, {
-      userId: 3,
-      doctorId: 2,
-      talk: [{
-        isQuestion: true,
-        msg: '问:问题3?<br/>'
-      }],
-      email: '515161153@qq.com',
-      description: 'lol i love dog'
     }
   ]
 };
