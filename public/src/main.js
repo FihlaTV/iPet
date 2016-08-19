@@ -2,7 +2,7 @@
  * Created by ritter on 16-8-18.
  */
 import {Router, Route, browserHistory} from 'react-router';
-import React from 'react';
+import React from 'react';  // eslint-disable-line no-unused-vars
 import {render} from 'react-dom';
 import createLogger from 'redux-logger';//¥Ú”°»’÷æ
 

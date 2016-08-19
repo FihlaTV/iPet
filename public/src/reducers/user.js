@@ -3,8 +3,8 @@
  */
 const user = (state = {}, action)=> {
   switch (action.type) {
-    case 'USER_LOADED':
-      return action.data;
+  case 'USER_LOADED':
+    return action.data;
   }
   return state;
 };

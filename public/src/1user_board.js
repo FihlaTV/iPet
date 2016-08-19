@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {render} from 'react-dom';
+import React, {Component} from 'react';   // eslint-disable-line no-unused-vars
+import {render} from 'react-dom';   // eslint-disable-line no-unused-vars
 import Doctor from './container/Doctor';
 import doctor from './reducers/doctor';
 

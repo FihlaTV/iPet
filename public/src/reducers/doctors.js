@@ -1,7 +1,7 @@
 const doctors = (state = [], action)=> {
   switch (action.type) {
-    case 'DOCTORS_LOAD':
-      return action.data;
+  case 'DOCTORS_LOAD':
+    return action.data;
   }
   return state;
 };

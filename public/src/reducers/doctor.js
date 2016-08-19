@@ -1,7 +1,7 @@
 const doctor = (state = {}, action)=> {
   switch (action.type) {
-    case 'SHOW_INFO':
-      return action.data;
+  case 'SHOW_INFO':
+    return action.data;
   }
   return state;
 };

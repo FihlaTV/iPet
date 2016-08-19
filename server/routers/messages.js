@@ -17,7 +17,7 @@ router.get('/', (req, res)=> {
 router.put('/', (req, res)=> {
   Message.findById(req.query.id, (err, message)=> {
     message.talk.push(req.body);
-    Message.update({_id: message._id}, message, (err, data)=> {
+    Message.update({_id: message._id}, message, (err, data)=> {  // eslint-disable-line no-unused-vars
       res.send({
         error: err,
         data: message.talk
