@@ -17,4 +17,4 @@ const doctorRequestMiddleware = store =>next =>action=> { // eslint-disable-line
   }
   next(action);
 };
- export default doctorRequestMiddleware;
+export default doctorRequestMiddleware;
