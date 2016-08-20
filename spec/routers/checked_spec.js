@@ -10,6 +10,11 @@ describe('checkUserName test', ()=> {
     let result = checked.checkUserName(input);
     expect(result).toEqual(false);
   })
+  fit('should return a false', ()=> {
+    let input = '21';
+    let result = checked.checkUserName(input);
+    expect(result).toEqual(false);
+  })
 });
 
 describe('checkUserPsd test', ()=> {

@@ -1,7 +1,7 @@
 const user_login = (state = {}, action)=> {
   switch (action.type) {
   case 'LOGIN_RESULT':
-    return {statusCode: action.statusCode};
+    return {loginSuccess: action.statusCode === 200 ? true : false};
   }
   return state;
 };
