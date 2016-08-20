@@ -5,5 +5,4 @@ const doctors = (state=[], action)=> {
   }
   return state;
 };
-
 export default doctors;

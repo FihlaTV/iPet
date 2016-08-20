@@ -1,29 +1,31 @@
 import express from 'express';
+
 import User from '../models/User';
-
+// import uuid from 'node-uuid';
 let router = express.Router();
-
-router.get('/', (req, res)=> {
-  User.find((err, data)=> {
-    res.send(data);
+let sessionMap = [];
+function sessionFind(sessionId) {
+  return sessionMap.find(function (item) {
+    return (item.sessionId === sessionId);
   });
-});
+}
+// router.get('/', (req, res)=> {
+//
+//   User.find((err, data)=> {
+//     res.send(data);
+//   });
+// });
 
-router.get('/:username&:password', (req, res)=> {
+router.post('/', (req, res)=> {
+  console.log(req.body.username);
   User.findOne({
-    username:req.params.username,
-    password:req.params.password
+    username: req.body.username,
+    password: req.body.password
   }, (err, data)=> {
-    if(data) {
-      res.send({
-        result:true,
-        user_id:data._id
-      });
+    if (data!==null) {
+      res.status(200).send({});
     } else {
-      res.send({
-        result:false,
-        user_id:null
-      });
+      res.status(403).send({});
     }
 
   });
