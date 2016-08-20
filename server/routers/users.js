@@ -1,14 +1,13 @@
 import express from 'express';
-
 import User from '../models/User';
 // import uuid from 'node-uuid';
 let router = express.Router();
-let sessionMap = [];
-function sessionFind(sessionId) {
-  return sessionMap.find(function (item) {
-    return (item.sessionId === sessionId);
-  });
-}
+// let sessionMap = [];
+// function sessionFind(sessionId) {
+//   return sessionMap.find(function (item) {
+//     return (item.sessionId === sessionId);
+//   });
+// }
 // router.get('/', (req, res)=> {
 //
 //   User.find((err, data)=> {
@@ -17,7 +16,6 @@ function sessionFind(sessionId) {
 // });
 
 router.post('/', (req, res)=> {
-  console.log(req.body.username);
   User.findOne({
     username: req.body.username,
     password: req.body.password

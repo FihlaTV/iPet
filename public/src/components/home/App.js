@@ -13,7 +13,7 @@ class App extends Component {
               <h3 className="text-center">Doctor List</h3>
             </div>
             <DoctorList/>
-          </div>
+          </div>  
           <Foot/>
         </div>
     );

@@ -11,8 +11,8 @@ const userLoginMiddleware = store=>next=>action=> {
               type: 'LOGIN_RESULT',
               statusCode: res.statusCode
             });
-          });
-      break;
+        });
+    break;
   }
   next(action);
 };

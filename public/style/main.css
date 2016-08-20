@@ -1,42 +1,17 @@
-/*body {*/
-    /*margin: 0;*/
-    /*padding: 0;*/
-/*}*/
-/*.head {*/
-    /*border-left: 1px solid black;*/
-    /*border-right: 1px solid black;*/
-    /*border-bottom: 1px solid black;*/
-/*}*/
-/*.mainer {*/
-    /*margin-left: auto;*/
-    /*margin-right: auto;*/
-/*}*/
-/*!*.scrol {*!*/
-    /*!*height: 445px;*!*/
-    /*!*width: 73%;*!*/
-    /*!*overflow: auto;*!*/
-    /*!*border: 1px solid lightseagreen;*!*/
-/*!*}*!*/
-/*!*.doctor_head {*!*/
-    /*!*width: 73%;*!*/
-/*!*}*!*/
-/*.thumbnail {*/
-    /*margin-bottom: 8px;*/
-    /*padding:5px;*/
-/*}*/
-/*.doctor {*/
-    /*margin-bottom: 30px;*/
-    /*margin-right: 27px;*/
-/*}*/
+li{
+    list-style: none;
+}
+
+.doctor_img{
+    width:100px;
+    height:100px;
+}
+
 * {
     padding: 0;
     margin: 0;
 }
 
-/*body {*/
-/*margin: 0;*/
-/*padding: 0;*/
-/*}*/
 /******************首页的head样式************************/
 .head {
     width: 100%;
@@ -69,7 +44,7 @@
     margin-left: 25px;
     font-weight: bold;
     color: #8a6d3b;
-    font-family: 幼园;
+    font-family: ��԰;
 }
 
 .headRight {
@@ -104,32 +79,23 @@
     margin: 25px 0 0 20px;
     float: left;
     font-size: 17px;
-    font-family: 幼园;
+    font-family: ��԰;
     cursor: pointer;
 }
+
 .headRight .logIn:hover {
     color: #2aabd2;
 }
-.doctor_list{
+
+.doctor_list {
     width: 70%;
     float: left;
 }
-/*.headRight .logUp {*/
-/*display: block;*/
-/*width: 40px;*/
-/*height: 40px;*/
-/*margin: 25px 0 0 10px;*/
-/*float: left;*/
-/*}*/
 
 /******************首页的content样式************************/
 
-
-
-
-
 /******************首页的foot样式************************/
-.footer{
+.footer {
     width: 100%;
     height: 30px;
     text-align: center;
@@ -137,28 +103,9 @@
     font-size: 15px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*==============================*/
 
 .mainer {
-    /*width: 980px;*/
-    /*width: 1170px;*/
     margin-left: auto;
     margin-right: auto;
     padding-top: 10px;
@@ -182,3 +129,13 @@
     margin-bottom: 30px;
     margin-right: 27px;
 }
+textarea{
+    width:500px;
+    height:150px;
+    margin-top:15px;
+}
+
+/*.doctor_img {*/
+    /*width:10px;*/
+    /*height: 15px;*/
+/*}*/
