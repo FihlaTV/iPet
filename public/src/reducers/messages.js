@@ -3,10 +3,11 @@
  */
 const messages = (state = [], action)=> {
   switch (action.type) {
-  case 'USER_MSG_LOADED':
-    return action.data;
-  case 'SHOW_MSG':
-    return action.data.data;
+  case 'LOAD_MSG':
+    return {
+      id:action.data._id,
+      talk:action.data.talk
+    };
   }
   return state;
 };
