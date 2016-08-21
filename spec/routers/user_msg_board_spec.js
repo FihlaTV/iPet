@@ -25,3 +25,27 @@ describe('put /messages ', ()=> {
         });
   });
 });
+
+describe('get /messages ', ()=> {
+  fit('should get all message info', (done)=> {
+    request(app).get('/api/messages')
+        .end((err, res)=> {
+          expect(res.body.length).toEqual(2);
+          done();
+        });
+  });
+});
+
+describe('get /messages/find ', ()=> {
+  fit('should get null info', (done)=> {
+    request(app)
+        .get('/message/find')
+        .query({id: '1231231'})
+        .end((err, res)=> {
+          expect(res.body.data).toEqual();
+          done();
+        });
+  });
+});
+
+
