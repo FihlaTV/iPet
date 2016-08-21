@@ -5,6 +5,7 @@ import React, {Component} from 'react';// eslint-disable-line no-unused-vars
 import MsgItem from './MsgItem';
 
 class UserMessageBoard extends Component {
+
   constructor(props) {
     super(props);
     this.state = {
@@ -12,17 +13,23 @@ class UserMessageBoard extends Component {
     };
   }
 
+  componentWillMount() {
+    let userId = '47b2c7b9d8e1ecbf54300011';
+    let doctorId = '57b2c7b9d8e1ecbf54300000';
+    this.props.messageInit(userId, doctorId);
+  }
+
   handleClick() {
     let user_input = this.refs.message.value.trim();
-    if (user_input) {
-      this.props.addUserMsg(user_input);
+    if (user_input, this.props.messages.id) {
+      this.props.addUserMsg(user_input, this.props.messages.id);
     }
 
     this.refs.message.value = '';
   }
 
   render() {
-    let talk = this.props.messages;
+    let talk = this.props.messages.talk ? this.props.messages.talk : [];
     return (
         <div>
           <div id="left" className="col-sm-4 text-left">
