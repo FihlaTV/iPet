@@ -1,7 +1,7 @@
 import {connect} from 'react-redux';
 import UserMessageBoard from '../components/user_board/UserMessageBoard';
 import {addUserMsg} from '../actions/addUserMsgAction';
-import {messageInit} from '../actions/messageInit'
+import {messageInit} from '../actions/messageInit';
 
 const mapStateToProps = (state)=>(state);
 const mapDispatchToProps = (dispatch)=>({
