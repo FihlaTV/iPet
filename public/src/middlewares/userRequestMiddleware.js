@@ -32,7 +32,6 @@ const userRequestMiddleware = store => next => action=> { // eslint-disable-line
           });
         });
       break;
-
   }
   next(action);
 };
