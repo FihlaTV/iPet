@@ -4,8 +4,8 @@
 import mongoose from 'mongoose';
 
 const Message = mongoose.model('Message', {
-  userId: Number,
-  doctorId: Number,
+  userId: String,
+  doctorId: String,
   talk: [{
     isQuestion: Boolean,
     msg: String
