@@ -113,16 +113,16 @@ export default {
 
   Message: [
     { _id:'57b6815bf8885d021d874325',
-      userId: 1,
-      doctorId: 2,
+      userId: '47b2c7b9d8e1ecbf54300011',
+      doctorId: '57b2c7b9d8e1ecbf54300000',
       talk: [{
         isQuestion: true,
         msg: '问:你好?<br/>'
       }]
     }, {
       _id:'57b6815bf8885d021d874327',
-      userId: 2,
-      doctorId: 2,
+      userId: '47b2c7b9d8e1ecbf54300011',
+      doctorId: '57b2c7b9d8e1ecbf54300010',
       talk: [{
         isQuestion: true,
         msg: '问:问题1?<br/>'
