@@ -35,13 +35,14 @@ class Content extends Component {
     this.props.loginTodo(data);
   }
 
-  /*componentDidUpdate() {
-   if (this.props.user_login.loginSuccess) {
-   location.href = '../../../home';
-   } else {
-   alert('用户名或密码错误,请重新输入！');
-   }
-   }*/
+  componentDidUpdate() {
+    if (this.props.user_login.loginSuccess) {
+      location.href = '/home';
+    }
+    if (this.props.user_login.loginSuccess === false) {
+      alert('用户名或密码错误,请重新输入！');
+    }
+  }
 
   handleLoginClick() {
     this.props.showLoginBoard('login');
@@ -51,20 +52,16 @@ class Content extends Component {
     this.props.showLoginBoard('signin');
   }
 
-  /*componentDidUpdate() {
-   if (this.props.user_login.loginSuccess) {
-   location.href = '/home';
-   } else {
-   alert('用户名或密码错误,请重新输入！');
-   }
-   }*/
-
   render() {
     return (
         <div className='login-content'>
           <ul className='user-login-list' id='user-login-list'>
-            <li ref='loginSelected' className={(this.props.isLogin)?'user-login':''} onClick={this.handleLoginClick.bind(this)}>用户登录</li>
-            <li ref='signInSelected' className={(this.props.isLogin)?'':'user-login'} onClick={this.handleSignInClick.bind(this)}>快速注册</li>
+            <li ref='loginSelected' className={(this.props.isLogin) ? 'user-login' : ''}
+                onClick={this.handleLoginClick.bind(this)}>用户登录
+            </li>
+            <li ref='signInSelected' className={(this.props.isLogin) ? '' : 'user-login'}
+                onClick={this.handleSignInClick.bind(this)}>快速注册
+            </li>
           </ul>
           <ul className='user-login-ul' id='user-login-ul'>
             <li className='user-login-li' id='user-login-li' style={{display: (this.props.isLogin) ? 'block' : 'none'}}>
