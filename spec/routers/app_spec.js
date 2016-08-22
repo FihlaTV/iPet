@@ -164,37 +164,3 @@ describe('get /api/doctors:id', ()=> {
   });
 
 });
-
-describe('get /api/users:id', ()=> {
-  it('should return a user info', (done)=> {
-    request(app)
-        .get('/api/users/47b2c7b9d8e1ecbf54300010')
-        .expect({
-          '_id': '47b2c7b9d8e1ecbf54300010',
-          'username': 'hanzi',
-          'email': '515161153@qq.com',
-          'description': 'lol i love dog',
-        })
-        .end((err)=> {
-          if (err) {
-            done.fail(err);
-          } else {
-            done();
-          }
-        });
-  });
-
-  it('should return null', (done)=> {
-    request(app)
-        .get('/api/users/57b2c7b9d8e1ecbf54300080')
-        .expect(404)
-        .end((err)=> {
-          if (err) {
-            done.fail(err);
-          } else {
-            done();
-          }
-        });
-  });
-
-});

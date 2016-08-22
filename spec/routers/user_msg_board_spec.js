@@ -19,7 +19,7 @@ describe('put /messages ', ()=> {
           if (error) {
             done.fail(error);
           } else {
-            expect(res.body.data[res.body.data.length - 1].msg).toEqual('问：问题测试');
+            expect(res.body.talk[res.body.talk.length - 1].msg).toEqual('问：问题测试');
             done();
           }
         });
@@ -27,7 +27,7 @@ describe('put /messages ', ()=> {
 });
 
 describe('get /messages/load ', ()=> {
-  fit('should get a message Object', (done)=> {
+  it('should get a message Object', (done)=> {
     request(app)
         .get('/api/messages/load')
         .query({
@@ -38,7 +38,7 @@ describe('get /messages/load ', ()=> {
       done();
     });
   });
-  fit('should insert a message Object', (done)=> {
+  it('should insert a message Object', (done)=> {
     request(app)
         .get('/api/messages/load')
         .query({

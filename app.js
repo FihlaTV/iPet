@@ -4,6 +4,8 @@ import bodyParser from 'body-parser';
 import regRouters from './server/routers';
 import path from 'path';
 
+import cookieParser from 'cookie-parser';
+
 const app = express();
 
 mongoose.connect('mongodb://localhost/doctors');
@@ -11,6 +13,8 @@ mongoose.connect('mongodb://localhost/doctors');
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 }));
+
+app.use(cookieParser());
 
 app.use(express.static('public'));
 
