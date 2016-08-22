@@ -15,7 +15,7 @@ class UserMessageBoard extends Component {
 
   componentWillMount() {
     let userId = '47b2c7b9d8e1ecbf54300011';
-    let doctorId = '57b2c7b9d8e1ecbf54300000';
+    let doctorId = this.props.doctor_id;
     this.props.messageInit(userId, doctorId);
   }
 
