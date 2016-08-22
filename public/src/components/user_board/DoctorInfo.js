@@ -3,12 +3,12 @@ import React, {Component} from 'react';  // eslint-disable-line no-unused-vars
 class DoctorInfo extends Component {
 
   componentWillMount() {
-    this.props.doctorInit(this.props.params.doctor_id);
+    this.props.doctorInit(this.props.doctor_id);
   }
 
   render() {
     return (
-        <div classID='doctor_info'>
+        <div className='doctor_info text-center'>
           <ul>
             <label>医生信息</label>
             <li>

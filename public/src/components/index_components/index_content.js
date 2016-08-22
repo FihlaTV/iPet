@@ -64,11 +64,17 @@ class Content extends Component {
         login: 'none',
         signIn: 'block'
       });
-      let loginNav=this.refs.loginSelected;
-      let signInNav=this.refs.signInSelected;
-      signInNav.className='user-login';
-      loginNav.className='';
-
+      let loginNav = this.refs.loginSelected;
+      let signInNav = this.refs.signInSelected;
+      signInNav.className = 'user-login';
+      loginNav.className = '';
+    }
+  }
+  componentDidUpdate() {
+    if (this.props.user_login.loginSuccess) {
+      location.href = '/home';
+    } else {
+      alert('用户名或密码错误,请重新输入！');
     }
   }
 

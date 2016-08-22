@@ -21,9 +21,9 @@ router.post('/', (req, res)=> {
     password: req.body.password
   }, (err, data)=> {
     if (data!==null) {
-      res.status(200).send({});
+      res.sendStatus(200);
     } else {
-      res.status(403).send({});
+      res.sendStatus(403);
     }
 
   });
