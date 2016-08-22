@@ -1,6 +1,11 @@
 import React, {Component} from 'react';// eslint-disable-line no-unused-vars
 import checked from './checked';
 class Content extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
   checkedEmpty(data) {
     if (checked.isEmpty(data.username) || checked.isEmpty(data.password)) {
       alert('用户名和密码不能为空！');
@@ -30,11 +35,40 @@ class Content extends Component {
     this.props.loginTodo(data);
   }
 
-  componentDidUpdate() {
-    if (this.props.user_login.loginSuccess) {
-      location.href = '../../../home';
-    } else {
-      alert('用户名或密码错误,请重新输入！');
+  /*componentDidUpdate() {
+   if (this.props.user_login.loginSuccess) {
+   location.href = '../../../home';
+   } else {
+   alert('用户名或密码错误,请重新输入！');
+   }
+   }*/
+
+  handleLoginClick() {
+    this.props.showLoginBoard('login');
+    if (this.props.isLogin === true) {
+      this.setState({
+        login: 'block',
+        signIn: 'none'
+      });
+      let loginNav=this.refs.loginSelected;
+      let signInNav=this.refs.signInSelected;
+      signInNav.className='';
+      loginNav.className='user-login';
+    }
+  }
+
+  handleSignInClick() {
+    this.props.showLoginBoard('signin');
+    if (this.props.isLogin === false) {
+      this.setState({
+        login: 'none',
+        signIn: 'block'
+      });
+      let loginNav=this.refs.loginSelected;
+      let signInNav=this.refs.signInSelected;
+      signInNav.className='user-login';
+      loginNav.className='';
+
     }
   }
 
@@ -42,11 +76,11 @@ class Content extends Component {
     return (
         <div className='login-content'>
           <ul className='user-login-list' id='user-login-list'>
-            <li className='user-login'>用户登录</li>
-            <li>快速注册</li>
+            <li ref='loginSelected' className='user-login' onClick={this.handleLoginClick.bind(this)}>用户登录</li>
+            <li ref='signInSelected' onClick={this.handleSignInClick.bind(this)}>快速注册</li>
           </ul>
           <ul className='user-login-ul' id='user-login-ul'>
-            <li className='user-login-li' id='user-login-li'>
+            <li className='user-login-li' id='user-login-li' style={{display: this.state.login}}>
         <span className='login_username'>
         <img src='images/login_images/user.png'/>
         <input type='text' ref='username' placeholder='用户名'/>
@@ -62,7 +96,7 @@ class Content extends Component {
         <button className='login_btn' onClick={this.handleClick.bind(this)}>登录</button>
     </span>
             </li>
-            <li id='user-logup-li'>
+            <li id='user-logup-li' style={{display: this.state.signIn}}>
         <span>
         <input type='text' placeholder='请输入用户名'/>
         <img src='images/login_images/user.png'/>
