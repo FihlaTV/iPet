@@ -9,7 +9,7 @@ class UserMsgBoardApp extends Component {
     return (
         <div>
 
-          <div className="mainer">
+          <div className="userMsg">
             <AddUserMsg/>
           </div>
         </div>
