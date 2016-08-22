@@ -25,16 +25,19 @@ router.post('/', (req, res)=> {
 });
 
 router.get('/cookie', (req, res)=> {
+  console.log(req.cookies.sessionId + '=====')
   let sessionId = req.cookies.sessionId;
+
   let exit = sessionMap.find((session)=> {
     return sessionId === session.sessionId;
   });
-
   if (exit) {
+    res.status(200);
     res.send(exit.userId);
   } else {
-    res.send();
+    res.sendStatus(403);
   }
+
 
 });
 

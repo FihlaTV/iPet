@@ -6,6 +6,7 @@ import React from 'react';  // eslint-disable-line no-unused-vars
 import {render} from 'react-dom';
 import createLogger from 'redux-logger';//打印日志
 
+
 import App from './components/home/App';
 import UserBoard from './components/user_board/UserBoard';
 import doctorList from './reducers';
