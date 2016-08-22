@@ -70,13 +70,13 @@ class Content extends Component {
       loginNav.className = '';
     }
   }
-  componentDidUpdate() {
+  /*componentDidUpdate() {
     if (this.props.user_login.loginSuccess) {
       location.href = '/home';
     } else {
       alert('用户名或密码错误,请重新输入！');
     }
-  }
+  }*/
 
   render() {
     return (
