@@ -15,7 +15,7 @@ class UserBoard extends Component {
           <Head/>
           <div>
             <DoctorInfo doctor_id={this.props.params.doctor_id}/>
-            <UserMsgBoard/>
+            <UserMsgBoard doctor_id={this.props.params.doctor_id}/>
           </div>
           <Foot/>
         </div>
