@@ -32,7 +32,7 @@ class Content extends Component {
 
   componentDidUpdate() {
     if (this.props.user_login.loginSuccess) {
-      location.href = '../../../home';
+      location.href = '/home';
     } else {
       alert('用户名或密码错误,请重新输入！');
     }

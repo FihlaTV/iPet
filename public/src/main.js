@@ -7,17 +7,18 @@ import {render} from 'react-dom';
 import createLogger from 'redux-logger';//打印日志
 
 import App from './components/home/App';
-import DoctorInfo from './container/Doctor';
+import UserBoard from './components/user_board/UserBoard';
 import doctorList from './reducers';
 
 import {createStore, applyMiddleware} from 'redux';
 import {Provider} from 'react-redux';
 import doctorsRequestMiddleware from './middlewares/doctorsRequestMiddleware';
 import doctorRequestMiddleware from './middlewares/doctorRequestMiddleware';
+import userRequestMiddleware from './middlewares/userRequestMiddleware';
 
 const store = createStore(
     doctorList,
-    applyMiddleware(createLogger(), doctorsRequestMiddleware, doctorRequestMiddleware)
+    applyMiddleware(createLogger(), doctorsRequestMiddleware, doctorRequestMiddleware,userRequestMiddleware)
 );
 
 store.dispatch({
@@ -30,7 +31,7 @@ render(
       <Router history={browserHistory}>
 
         <Route path='/home' component={App}/>
-        <Route path='/user_board/:doctor_id' component={DoctorInfo}/>
+        <Route path='/user_board/:doctor_id' component={UserBoard}/>
 
       </Router>
 
