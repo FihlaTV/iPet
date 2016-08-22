@@ -29,11 +29,11 @@ router.get('/cookie', (req, res)=> {
   let exit = sessionMap.find((session)=> {
     return sessionId === session.sessionId;
   });
-  if (eixt) {
-    res.send(exit.userId)
 
+  if (exit) {
+    res.send(exit.userId);
   } else {
-    res.send('');
+    res.send();
   }
 
 });
