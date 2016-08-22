@@ -34,9 +34,9 @@ describe('get /messages/load ', ()=> {
           userId: '47b2c7b9d8e1ecbf54300011',
           doctorId: '57b2c7b9d8e1ecbf54300010'
         }).end((err, res)=> {
-          expect(res.body.talk.length).toEqual(1);
-          done();
-        });
+      expect(res.body.talk.length).toEqual(1);
+      done();
+    });
   });
   fit('should insert a message Object', (done)=> {
     request(app)
@@ -49,6 +49,21 @@ describe('get /messages/load ', ()=> {
       done();
     });
   });
+});
+
+describe('get /messages/load_work ', ()=> {
+
+  fit('should get all message Object', (done)=> {
+    request(app)
+        .get('/api/messages/load_work')
+        .query({
+          doctorId: '57b2c7b9d8e1ecbf54300000'
+        }).end((err, res)=> {
+      expect(res.body.length).toEqual(2);
+      done();
+    });
+  });
+
 });
 
 
