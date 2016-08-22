@@ -8,7 +8,7 @@ class DoctorInfo extends Component {
 
   render() {
     return (
-        <div classID='doctor_info'>
+        <div className='doctor_info text-center'>
           <ul>
             <label>医生信息</label>
             <li>
