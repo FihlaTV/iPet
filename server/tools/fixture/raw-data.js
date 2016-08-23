@@ -118,6 +118,9 @@ export default {
       talk: [{
         isQuestion: true,
         msg: '问:你好?<br/>'
+      },{
+        isQuestion: false,
+        msg: '问:你好?'
       }]
     },
     { _id:'57b6815bf8885d021d874320',
@@ -125,7 +128,7 @@ export default {
       doctorId: '57b2c7b9d8e1ecbf54300000',
       talk: [{
         isQuestion: true,
-        msg: '问:你好?<br/>'
+        msg: '问:你好?2222'
       }]
     },
     {
