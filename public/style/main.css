@@ -1,11 +1,11 @@
-li{
+li {
     list-style: none;
 }
 
-.doctor_img{
-    width:100px;
-    height:100px;
-}
+/*.doctor_img {*/
+/*width: 100px;*/
+/*height: 100px;*/
+/*}*/
 
 * {
     padding: 0;
@@ -15,41 +15,35 @@ li{
 /******************首页的head样式************************/
 .head {
     width: 100%;
-    height: 90px;
-    border-bottom: 1px solid black;
+    height: 78px;
+    background: #487181;
 }
 
-.headLeft {
-    width: 400px;
-    height: 90px;
-    float: left;
+.wareName {
+    display: block;
+    width: 255px;
+    height: 78px;
+    background: url("../images/login_images/warename.png");
     margin-left: 20px;
-}
-
-.headLeft .logo {
-    width: 70px;
-    height: 70px;
-    display: block;
-    margin-top: 10px;
     float: left;
 }
 
-.headLeft .logoName {
-    width: 250px;
-    height: 90px;
-    display: block;
+.head .login-logo {
+    width: 75px;
+    height: 75px;
+    margin-left: 30px;
     float: left;
-    line-height: 90px;
-    font-size: 32px;
-    margin-left: 25px;
-    font-weight: bold;
-    color: #8a6d3b;
-    font-family: ��԰;
 }
-
+.head_pet{
+    width: 90px;
+    height:60px;
+    position: absolute;
+    left:700px;
+    top:18px;
+}
 .headRight {
     width: 120px;
-    height: 90px;
+    height: 70px;
     float: right;
 }
 
@@ -57,17 +51,18 @@ li{
     display: block;
     width: 40px;
     height: 40px;
-    margin: 27px 0 0 10px;
+    margin: 15px 0 0 10px;
     float: left;
     border-radius: 50%;
-    border: 1px solid #9da0a4;
+    border: 1px solid #b9def0;
     cursor: pointer;
+    z-index: 11;
 }
 
 .headRight .userImage img {
     width: 36px;
     height: 36px;
-    margin: 1px 0 0 1px;
+    margin: 2px 0 0 2px;
     border-radius: 50%;
 }
 
@@ -76,15 +71,17 @@ li{
     width: 40px;
     height: 40px;
     line-height: 40px;
-    margin: 25px 0 0 20px;
+    margin: 15px 0 0 20px;
     float: left;
     font-size: 17px;
-    font-family: ��԰;
+    font-family: 幼园;
+    color: #fff;
     cursor: pointer;
+    z-index: 11;
 }
 
 .headRight .logIn:hover {
-    color: #2aabd2;
+    color: #fff;
 }
 
 .doctor_list {
@@ -93,6 +90,167 @@ li{
 }
 
 /******************首页的content样式************************/
+.main_left {
+    width: 73%;
+    float: left;
+    height: 100%;
+    padding-bottom: 20px;
+    border: 1px solid #c7ddef;
+    margin: 5px 0 5px 5px;
+    border-radius: 3px;
+}
+.doctor_head {
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+    background: #80b3af;
+}
+
+.doctor_head span {
+    display: block;
+    width: 100px;
+    height: 32px;
+    line-height: 36px;
+    margin: 8px 0 0 4.5%;
+    background: #fff;
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+.main_left_bg{
+    width: 70px;
+    height:55px;
+    position: absolute;
+    left:125px;
+    top:70px;
+
+}
+
+.doctorList {
+    width: 98%;
+    height: 100%;
+    border-right: 1px solid #9da0a4;
+    margin: auto;
+}
+
+    height: 55px;
+    position: absolute;
+    float: right;
+    right:30px;
+
+.doctorList li {
+    width: 145px;
+    height: 210px;
+    list-style-type: none;
+    float: left;
+    margin: 15px 0 0 3.5%;
+    border: 1px solid #b9def0;
+    border-radius: 3px;
+}
+
+.doctorList li img {
+    width: 140px;
+    height: 140px;
+    margin: 2px 0 0 2px;
+}
+
+.doctorList li .doctors_infor {
+    width: 145px;
+    height: 60px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.main_right {
+    width: 23%;
+    height: 100%;
+    padding-bottom: 20px;
+    float: left;
+    margin: 5px 0 5px 15px;
+    border-radius: 3px;
+}
+
+.main_right .near_hospital {
+    width: 100%;
+    height: 50%;
+    border-radius: 3px;
+    border: 1px solid #369da3;
+}
+.head_bg{
+    width: 50px;    top:71px;
+    z-index: 10;
+}
+.main_right .near_hospital span {
+    display: block;
+    width: 100%;
+    height: 40px;
+    background: #89bfba;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.main_right .near_hospital span i {
+    font-style: normal;
+    display: block;
+    width: 100px;
+    height: 30px;
+    background: #fff;
+    float: left;
+    margin: 10px 0 0 5px;
+    font-size: 16px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.main_right .near_hospital span i img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin: -7px 5px 0 0;
+}
+
+.main_right .near_hospital ul {
+    width: 100%;
+    height: 100%;
+}
+
+.main_right .near_hospital ul li {
+    width: 90%;
+    height: 40px;
+    font-size: 15px;
+    line-height: 40px;
+    margin-left: 30px;
+    list-style-image: url('../images/dingwei.png');
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+    /*list-style-position: inherit;*/
+}
+
+.main_right .near_hospital ul li:hover {
+    color: #369da3;
+}
+
+.common_disease {
+    margin-top: 50px;
+}
+.common_disease span .doctor_bg{
+    width: 50px;
+    height: 55px;
+    float: right;
+    margin-top: -15px;
+
+}
+.main_right .common_disease span i img {
+    width: 18px;
+    height: 18px;
+    margin: -4px 5px 0 2px;
+}
+
+.main_right .common_disease ul li {
+    list-style-image: url('../images/right.png');
+}
 
 /******************首页的foot样式************************/
 .footer {
@@ -101,19 +259,12 @@ li{
     text-align: center;
     line-height: 30px;
     font-size: 15px;
+    overflow: hidden;
+    background: #294A57;
+    color: #fff;
 }
 
 /*==============================*/
-
-.mainer {
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 10px;
-}
-
-.doctorList {
-    width: 70%;
-}
 
 .scrol {
     height: 620px;
@@ -129,13 +280,14 @@ li{
     margin-bottom: 30px;
     margin-right: 27px;
 }
-textarea{
-    width:500px;
-    height:150px;
-    margin-top:15px;
+
+textarea {
+    width: 500px;
+    height: 150px;
+    margin-top: 15px;
 }
 
 /*.doctor_img {*/
-    /*width:10px;*/
-    /*height: 15px;*/
+/*width:10px;*/
+/*height: 15px;*/
 /*}*/

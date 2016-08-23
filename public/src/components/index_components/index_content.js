@@ -26,11 +26,12 @@ class Content extends Component {
     if (!this.checkedEmpty(data) || !this.checkedScheme(data)) {
       return;
     }
-
     this.props.loginTodo(data);
   }
 
   componentDidUpdate() {
+    console.log(this.props.user_login.loginSuccess);
+
     if (this.props.user_login.loginSuccess) {
       location.href = '/home';
     } else {

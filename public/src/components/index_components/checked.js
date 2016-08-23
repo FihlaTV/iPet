@@ -3,7 +3,7 @@ function checkUserName(username) {
 }
 
 function isEmpty(temp) {
-  return temp === '' ? true : false;
+  return temp === '';
 }
 
 function checkPsd(password) {

@@ -56,7 +56,8 @@ body {
     font-size: 17px;
     text-align: center;
     cursor: pointer;
-    border-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     font-weight: bold;
     color: #7C7C7C;
 }
@@ -103,7 +104,6 @@ body {
     margin: 0 25px 0 0;
     line-height: 30px;
     font-size: 15px;
-    line-height: 30px;
     width: 150px;
     float: right;
     text-align: right;
