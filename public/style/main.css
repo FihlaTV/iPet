@@ -274,10 +274,9 @@ li {
     background:url('/images/user_bg.jpg');
 }
 .user_conversion_box{
-    width: 1230px;
+    width: 1220px;
     height:660px;
     margin:5px auto 5px;
-
 }
 
 .user_conversion_box .doctor_info{
@@ -286,6 +285,7 @@ li {
     background: #fff;
     border-radius: 7px;
     float: left;
+    overflow: hidden;
 }
 .doctor_info .info_title{
     width: 350px;
@@ -329,10 +329,11 @@ li {
 }
 
 .user_conversion_box .user_board{
-    width: 850px;
+    width: 800px;
     height: 660px;
     float: right;
     border-radius: 7px;
+    margin-right: 20px;
 
 }
 .user_board .user_board_title{
@@ -345,7 +346,7 @@ li {
     border-top-right-radius:7px;
 }
 .user_board .all_message{
-    width: 99.3%;
+    width: 794px;
     height: 410px;
     border-left:3px solid #b9def0;
     border-right:3px solid #b9def0;
@@ -467,44 +468,44 @@ li {
     /*margin: 10px;*/
     /*border: 1px solid black;*/
 /*}*/
-.doctor_info {
-    width: 25%;
-    border: 1px solid black;
-    height: 230px;
-    float: left;
-    padding-left: 5px;
-    margin:10px 35px;
-}
-.userMsg {
-    float: left;
-    /*width: 500px;*/
-    margin: 10px;
-    border: 1px solid black;
-}
+/*.doctor_info {*/
+    /*width: 25%;*/
+    /*border: 1px solid black;*/
+    /*height: 230px;*/
+    /*float: left;*/
+    /*padding-left: 5px;*/
+    /*margin:10px 35px;*/
+/*}*/
+/*.userMsg {*/
+    /*float: left;*/
+    /*!*width: 500px;*!*/
+    /*margin: 10px;*/
+    /*border: 1px solid black;*/
+/*}*/
 
-.work_talk {
-    width: 650px;
-    line-height: 30px;
-    border: 1px solid gainsboro;
-    margin: 5px auto;
-}
-.work_list {
-    width: 700px;
-    height: 536px;
-    overflow: auto;
-    margin: 5px auto;
-    border: 1px solid gainsboro;
-}
-.work_item {
-    border: 1px solid black;
-    width: 600px;
-    margin: 5px auto;
-}
-.input_reply {
-    width: 563px;
-    margin: 5px 5px 0 0;
-}
-.reply_board {
-    width: 600px;
-    margin: 0 auto;
-}
+/*.work_talk {*/
+    /*width: 650px;*/
+    /*line-height: 30px;*/
+    /*border: 1px solid gainsboro;*/
+    /*margin: 5px auto;*/
+/*}*/
+/*.work_list {*/
+    /*width: 700px;*/
+    /*height: 536px;*/
+    /*overflow: auto;*/
+    /*margin: 5px auto;*/
+    /*border: 1px solid gainsboro;*/
+/*}*/
+/*.work_item {*/
+    /*border: 1px solid black;*/
+    /*width: 600px;*/
+    /*margin: 5px auto;*/
+/*}*/
+/*.input_reply {*/
+    /*width: 563px;*/
+    /*margin: 5px 5px 0 0;*/
+/*}*/
+/*.reply_board {*/
+    /*width: 600px;*/
+    /*margin: 0 auto;*/
+/*}*/
