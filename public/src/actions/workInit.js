@@ -1,3 +1,6 @@
 /**
- * Created by qiyanzi on 16-8-22.
+ * Created by sun on 8/21/16.
  */
+export const workInit = ()=>({
+  type: 'WORK_INIT'
+});
