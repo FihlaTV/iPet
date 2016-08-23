@@ -7,12 +7,8 @@ class Head extends Component {
   render() {
     return (
       <div className="head">
-          <img className='login-logo' src='images/login_images/ipetlogo.png'/>
+          <img className='login-logo' src='/images/login_images/ipetlogo.png'/>
           <span className='wareName'> </span>
-        <div className="headLeft">
-          <img className="logo" src="/images/login_images/ipetlogo.png" alt="iPet logo" />
-          <span className="logoName">宠物之家</span>
-        </div>
         <div className="headRight">
           {/*<img src="images/cat.png" className="head_pet" alt=""/>*/}
           <span className="userImage">

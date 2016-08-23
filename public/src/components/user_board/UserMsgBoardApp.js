@@ -7,12 +7,9 @@ import AddUserMsg from '../../container/AddUserMsg';
 class UserMsgBoardApp extends Component {
   render() {
     return (
-        <div>
-
-          <div className="userMsg">
-            <AddUserMsg/>
-          </div>
-        </div>
+      <div className="userMsg">
+        <AddUserMsg/>
+      </div>
     );
   }
 }
