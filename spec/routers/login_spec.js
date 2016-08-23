@@ -43,7 +43,7 @@ describe('post /api/login', ()=> {
         .expect(200)
         .end((err, res)=> {
           if (res.headers['set-cookie'].map(h => cookie.parse(h))
-              .some(c => c.sessionId)) {
+                  .some(c => c.sessionId)) {
             done();
           } else {
             done.fail('cookie not exist');
@@ -66,6 +66,41 @@ describe('post /api/login', ()=> {
           } else {
             done.fail(err);
           }
+        });
+  });
+
+  it('should return statusCode 403', (done)=> {
+    request(app)
+        .get('/api/login/cookie')
+        .expect(403)
+        .end((err, res)=> {
+          if (res.status === 403) {
+            done()
+          } else {
+            done.fail(err);
+          }
+        });
+  });
+
+  it('should return statusCode 200 and userId', (done)=> {
+    const agent = request.agent(app);
+
+    agent.post('/api/login')
+        .type('form')
+        .send({
+          username: 'hanzi22',
+          password: '123456'
+        })
+        .end(() => {
+          agent.get('/api/login/cookie')
+              .expect(200)
+              .end((err, res)=>{
+                if (err) {
+                  done.fail(err);
+                } else {
+                  done();
+                }
+              })
         });
   });
 

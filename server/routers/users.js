@@ -25,7 +25,6 @@ router.post('/', (req, res)=> {
 });
 
 router.get('/cookie', (req, res)=> {
-  console.log(req.cookies.sessionId + '=====')
   let sessionId = req.cookies.sessionId;
 
   let exit = sessionMap.find((session)=> {

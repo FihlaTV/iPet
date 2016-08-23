@@ -53,7 +53,7 @@ describe('get /messages/load ', ()=> {
 
 describe('get /messages/load_work ', ()=> {
 
-  fit('should get all message Object', (done)=> {
+  it('should get all message Object', (done)=> {
     request(app)
         .get('/api/messages/load_work')
         .query({

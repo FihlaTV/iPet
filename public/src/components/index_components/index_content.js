@@ -35,15 +35,6 @@ class Content extends Component {
     this.props.loginTodo(data);
   }
 
-  componentDidUpdate() {
-    if (this.props.user_login.loginSuccess) {
-      location.href = '/home';
-    }
-    if (this.props.user_login.loginSuccess === false) {
-      alert('用户名或密码错误,请重新输入！');
-    }
-  }
-
   handleLoginClick() {
     this.props.showLoginBoard('login');
   }
@@ -54,7 +45,7 @@ class Content extends Component {
       this.setState({
         login: 'none',
         signIn: 'block'
-      });2
+      });
       let loginNav = this.refs.loginSelected;
       let signInNav = this.refs.signInSelected;
       signInNav.className = 'user-login';

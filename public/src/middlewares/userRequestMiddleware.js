@@ -24,7 +24,6 @@ const userRequestMiddleware = store => next => action=> { // eslint-disable-line
     request
         .get('/api/login/cookie')
         .end((err, res)=> {
-          console.log(res.status)
           if (res.status === 200) {
             store.dispatch({
               type: 'MSG_INIT',
