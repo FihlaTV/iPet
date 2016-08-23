@@ -16,9 +16,9 @@ class WorkList extends Component {
     return (
         <div>
           {
-            workspaceItems.map((v, k)=> {
-              <WorkItem key={k} talk={v.talk}/>
-            })
+            workspaceItems.map((v, k)=> (
+              <WorkItem key={k} talk={v.talk} />
+            ))
           }
         </div>
     );
