@@ -51,12 +51,12 @@ class Content extends Component {
       loginNav.className = '';
     }
   }
-  componentDidUpdate() {
-    console.log(this.props.user_login.loginSuccess);
 
+  componentDidUpdate() {
     if (this.props.user_login.loginSuccess) {
       location.href = '/home';
-    } else {
+    }
+    if (this.props.user_login.loginSuccess === false) {
       alert('用户名或密码错误,请重新输入！');
     }
   }

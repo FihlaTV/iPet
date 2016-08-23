@@ -11,7 +11,7 @@ class DoctorWorkspaceApp extends Component {
     return (
         <div>
           <Head/>
-          <div className="userMsg">
+          <div>
             <DoctorWorkspace/>
           </div>
           <Foot/>
