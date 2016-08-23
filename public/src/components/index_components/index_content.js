@@ -50,6 +50,23 @@ class Content extends Component {
 
   handleSignInClick() {
     this.props.showLoginBoard('signin');
+    if (this.props.isLogin === false) {
+      this.setState({
+        login: 'none',
+        signIn: 'block'
+      });2
+      let loginNav = this.refs.loginSelected;
+      let signInNav = this.refs.signInSelected;
+      signInNav.className = 'user-login';
+      loginNav.className = '';
+    }
+  }
+  componentDidUpdate() {
+    if (this.props.user_login.loginSuccess) {
+      location.href = '/home';
+    } else {
+      alert('用户名或密码错误,请重新输入！');
+    }
   }
 
   render() {
