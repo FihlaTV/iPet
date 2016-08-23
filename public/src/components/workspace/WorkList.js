@@ -14,7 +14,7 @@ class WorkList extends Component {
   render() {
     let workspaceItems =  this.props.data ? this.props.data:[] ;
     return (
-        <div>
+        <div className="work_list">
           {
             workspaceItems.map((v, k)=> (
               <WorkItem key={k} talk={v.talk} />
