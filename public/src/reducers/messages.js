@@ -8,6 +8,7 @@ const messages = (state = [], action)=> {
       id:action.data._id,
       talk:action.data.talk
     };
+
   }
   return state;
 };

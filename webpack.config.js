@@ -7,7 +7,8 @@ module.exports = {
     login : ["./public/src/login", "./public/style/login_style.css"],
     main: ["./public/src/main", "./public/style/main.css"],
     user_board : ["./public/src/user_board", "./public/style/main.css"],
-    personal : ["./public/src/personal", "./public/style/personal_style.css"]
+    personal : ["./public/src/personal", "./public/style/personal_style.css"],
+    doctor_main : ["./public/src/doctor_main", "./public/style/main.css"]
   },
   output: {
     path: require('path').resolve("./public/dist"),

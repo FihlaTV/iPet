@@ -49,7 +49,7 @@ body {
 
 .login-content .user-login-list li {
     list-style-type: none;
-    width: 120px;
+    width:50%;
     height: 45px;
     float: left;
     line-height: 45px;

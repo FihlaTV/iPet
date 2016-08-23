@@ -19,7 +19,7 @@ describe('put /messages ', ()=> {
           if (error) {
             done.fail(error);
           } else {
-            expect(res.body.data[res.body.data.length - 1].msg).toEqual('问：问题测试');
+            expect(res.body.talk[res.body.talk.length - 1].msg).toEqual('问：问题测试');
             done();
           }
         });
@@ -27,18 +27,18 @@ describe('put /messages ', ()=> {
 });
 
 describe('get /messages/load ', ()=> {
-  fit('should get a message Object', (done)=> {
+  it('should get a message Object', (done)=> {
     request(app)
         .get('/api/messages/load')
         .query({
           userId: '47b2c7b9d8e1ecbf54300011',
           doctorId: '57b2c7b9d8e1ecbf54300010'
         }).end((err, res)=> {
-          expect(res.body.talk.length).toEqual(1);
-          done();
-        });
+      expect(res.body.talk.length).toEqual(1);
+      done();
+    });
   });
-  fit('should insert a message Object', (done)=> {
+  it('should insert a message Object', (done)=> {
     request(app)
         .get('/api/messages/load')
         .query({
@@ -49,6 +49,21 @@ describe('get /messages/load ', ()=> {
       done();
     });
   });
+});
+
+describe('get /messages/load_work ', ()=> {
+
+  it('should get all message Object', (done)=> {
+    request(app)
+        .get('/api/messages/load_work')
+        .query({
+          doctorId: '57b2c7b9d8e1ecbf54300000'
+        }).end((err, res)=> {
+      expect(res.body.length).toEqual(2);
+      done();
+    });
+  });
+
 });
 
 

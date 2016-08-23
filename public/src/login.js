@@ -21,7 +21,6 @@ render(
       <div>
         <Head />
         <LoginView />
-        {/*<Content />*/}
       </div>
     </Provider>,
 document.getElementById('app')

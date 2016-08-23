@@ -32,4 +32,12 @@ router.get('/load', (req, res)=> {
   });
 });
 
+router.get('/load_work',(req,res)=>{
+  Message.find({
+    doctorId:req.query.doctorId
+  },(err,data)=>{
+    res.send(data);
+  });
+});
+
 module.exports = router;

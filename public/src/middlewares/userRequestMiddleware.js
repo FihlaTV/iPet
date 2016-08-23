@@ -20,19 +20,37 @@ const userRequestMiddleware = store => next => action=> { // eslint-disable-line
         });
     break;
 
+  case 'GET_USERID':
+    request
+        .get('/api/login/cookie')
+        .end((err, res)=> {
+          if (res.status === 200) {
+            store.dispatch({
+              type: 'MSG_INIT',
+              userId: res.text,
+              doctorId: action.doctor_id
+            });
+          } else {
+            location.href = 'http://localhost:3000';
+          }
+
+        });
+    break;
+
   case 'MSG_INIT':
     request.get('/api/messages/load')
         .query({
           userId: action.userId,
           doctorId: action.doctorId
         }).end((err, res)=> {
-          next({
+          store.dispatch({
             type: 'LOAD_MSG',
             data: res.body
           });
         });
     break;
   }
+
   next(action);
 };
 
