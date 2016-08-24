@@ -1,10 +1,6 @@
 import React, {Component} from 'react';// eslint-disable-line no-unused-vars
 import checked from './checked';
 class Content extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
 
   checkedEmpty(data) {
     if (checked.isEmpty(data.username) || checked.isEmpty(data.password)) {
@@ -45,15 +41,32 @@ class Content extends Component {
 
   handleSignInClick() {
     this.props.showLoginBoard('signin');
-    if (this.props.isLogin === false) {
-      this.setState({
-        login: 'none',
-        signIn: 'block'
-      });
-      let loginNav = this.refs.loginSelected;
-      let signInNav = this.refs.signInSelected;
-      signInNav.className = 'user-login';
-      loginNav.className = '';
+  }
+
+  handleRegister() {
+    let newUserName = this.refs.newUserName.value;
+    let newEmail = this.refs.newEmail.value;
+    let newPassword = this.refs.newPassword.value;
+    let newData = {newUserName, newEmail, newPassword};
+
+    this.props.signIn(newData);
+    this.props.clearStatus();
+
+    this.refs.newUserName.value = '';
+    this.refs.newEmail.value = '';
+    this.refs.newPassword.value = '';
+  }
+
+  componentWillUpdate(nextProps) {
+
+    if (nextProps.isSignIn === true) {
+      this.props.showLoginBoard('login');
+      this.props.clearStatus();
+      this.refs.username.value = '';
+      this.refs.password.value = '';
+    } else if (nextProps.isSignIn === false && nextProps.isLogin === false) {
+      this.props.clearStatus();
+      alert('注册失败');
     }
   }
 
@@ -98,27 +111,27 @@ class Content extends Component {
         </li>
         <li id='user-logup-li' style={{display: (this.props.isLogin) ? 'none' : 'block'}}>
         <span>
-        <input type='text' placeholder='请输入用户名'/>
+        <input type='text' ref='newUserName' placeholder='请输入用户名'/>
         <img src='images/login_images/user.png'/>
         <img className='match_result' src='images/login_images/success.png'/>
         </span>
               <span>
-        <input type='text' placeholder='请输入邮箱'/>
+        <input type='text' ref='newEmail' placeholder='请输入邮箱'/>
         <img src='images/login_images/mail.png'/>
         <img className='match_result' src='images/login_images/success.png'/>
         </span>
               <span>
-        <input type='password' placeholder='请输入密码'/>
+        <input type='password' ref='newPassword' placeholder='请输入密码'/>
         <img src='images/login_images/mima.png'/>
         <img className='match_result' src='images/login_images/success.png'/>
         </span>
-              <span>
+              {/*<span>
         <input type='password' placeholder='重复密码'/>
         <img src='images/login_images/mima.png'/>
         <img className='match_result' src='images/login_images/success.png'/>
-        </span>
+        </span>*/}
               <span>
-        <button className='register_btn'>注册</button>
+        <button className='register_btn' onClick={this.handleRegister.bind(this)}>注册</button>
         </span>
             </li>
           </ul>
