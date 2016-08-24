@@ -28,10 +28,11 @@ class Content extends Component {
       username: this.refs.username.value,
       password: this.refs.password.value
     };
+    let loginType = '';
     if (!this.checkedEmpty(data) || !this.checkedScheme(data)) {
       return;
     }
-    this.props.loginTodo(data);
+    this.props.loginTodo(data, loginType);
   }
 
   handleLoginClick() {

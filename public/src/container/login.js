@@ -8,8 +8,8 @@ import {showLoginBoard} from '../actions/showLoginBoard';
 
 const mapStateToProps = (state)=> (state);
 const mapDispatchToProps = (dispatch)=>({
-  loginTodo: (data)=> {
-    dispatch(loginTodo(data));
+  loginTodo: (data, loginType)=> {
+    dispatch(loginTodo(data, loginType));
   },
 
   showLoginBoard: (text)=> {
