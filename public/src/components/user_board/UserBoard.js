@@ -11,9 +11,9 @@ class UserBoard extends Component {
 
   render() {
     return (
-        <div>
-          <Head/>
-          <div>
+        <div className="user_talk">
+          <Head />
+          <div className="user_conversion_box">
             <DoctorInfo doctor_id={this.props.params.doctor_id}/>
             <UserMsgBoard doctor_id={this.props.params.doctor_id}/>
           </div>

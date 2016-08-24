@@ -179,8 +179,11 @@ li {
     border-radius: 3px;
     border: 1px solid #369da3;
 }
-.head_bg{
-    width: 50px;    top:71px;
+.main_right .near_hospital .head_bg{
+    width: 50px;
+    height: 55px;
+    float: right;
+    margin:-53px 0 0 200px;
     z-index: 10;
 }
 .main_right .near_hospital span {
@@ -266,28 +269,183 @@ li {
     clear: both;
 }
 
-/*==============================*/
+/******************user提问框样式************************/
+.user_talk{
+    background:url('/images/user_bg.jpg');
+}
+.user_conversion_box{
+    width: 1220px;
+    height:660px;
+    margin:5px auto 5px;
+}
 
-.scrol {
-    height: 620px;
+.user_conversion_box .doctor_info{
+    width: 350px;
+    height: 100%;
+    background: #fff;
+    border-radius: 7px;
+    float: left;
+    overflow: hidden;
+}
+.doctor_info .info_title{
+    width: 350px;
+    height:50px;
+    text-align: center;
+    line-height: 50px;
+    background: #fff;
+    display: block;
+    border-top-left-radius:7px;
+    border-top-right-radius:7px;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid #c1c1c1;
+}
+.doctor_info ul{
+    width: 350px;
+    height: 600px;
+}
+.doctor_info ul li{
+    list-style-type: none;
+    margin-top: 10px;
+    text-indent: 30px;
+}
+.doctor_info ul .doctor_img_li{
+    border-bottom: 1px solid #c1c1c1;
+}
+.doctor_info ul li img{
+    width: 130px;
+    height:130px;
+    border-radius: 50%;
+    margin-left:80px;
+}
+.doctor_info ul .doctor_info_briefing{
+    width: 290px;
+    display: block;
+    margin:10px auto 0;
+
+    text-indent: 0;
+    word-break: break-all;
     overflow: auto;
 }
 
-.thumbnail {
-    margin-bottom: 8px;
-    padding: 2px;
+.user_conversion_box .user_board{
+    width: 800px;
+    height: 660px;
+    float: right;
+    border-radius: 7px;
+    margin-right: 20px;
+
+}
+.user_board .user_board_title{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background: #b9def0;
+    text-indent: 10px;
+    border-top-left-radius:7px;
+    border-top-right-radius:7px;
+}
+.user_board .all_message{
+    width: 794px;
+    height: 410px;
+    border-left:3px solid #b9def0;
+    border-right:3px solid #b9def0;
+    overflow-y: scroll;
+    background: #fff;
+}
+.user_board .all_message .every_question{
+    width:300px;
+    margin-bottom: 20px;
+    word-break:break-all;
+    font-size: 17px;
+    margin-left: 5px;
+    color:#000066;
+}
+.user_board .all_message .every_question .question{
+    border-radius: 4px;
+    margin: 2px 0 0 3px;
+    background: #e0e0e0;
+    font-size: 16px;
+    color:#0f0f0f;
+}
+.user_board .inputMessageDiv{
+    width: 100%;
+    height: 200px;
+    background: #b9def0;
+    border-bottom-left-radius:7px;
+    border-bottom-right-radius:7px;
+}
+.user_board .inputMessageDiv .select_box{
+    width: 100%;
+    height:40px;
+    display: block;
+}
+.user_board .inputMessageDiv .select_box img{
+    width: 20px;
+    height:20px;
+    margin: 10px 0 0 25px;
+    cursor:pointer;
+}
+.user_board .inputMessageDiv .inputMessage{
+    width: 90%;
+    height:120px;
+    resize: none;
+    outline:none;
+    margin-left: 20px;
+    border-radius: 4px;
+}
+.user_board .inputMessageDiv .sendMessage_btn{
+    width: 80px;
+    height:30px;
+    display: block;
+    background: #4698b3;
+    border: 1px solid #b9def0;
+    border-radius: 8px;
+    float:right;
+    margin-right: 65px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    cursor:pointer;
+}
+.user_board .inputMessageDiv .sendMessage_btn:hover{
+    background: #00b3ee;
+}
+.user_board .inputMessageDiv .sendMessage_btn:active{
+    background: #7ccccd;
 }
 
-.doctor {
-    margin-bottom: 30px;
-    margin-right: 27px;
-}
 
-textarea {
-    width: 500px;
-    height: 150px;
-    margin-top: 15px;
-}
+
+
+
+
+
+
+
+
+
+/*.scrol {*/
+    /*height: 620px;*/
+    /*overflow: auto;*/
+/*}*/
+
+/*.thumbnail {*/
+    /*margin-bottom: 8px;*/
+    /*padding: 2px;*/
+/*}*/
+
+/*.doctor {*/
+    /*margin-bottom: 30px;*/
+    /*margin-right: 27px;*/
+/*}*/
+
+/*textarea {*/
+    /*width: 500px;*/
+    /*height: 150px;*/
+    /*margin-top: 15px;*/
+/*}*/
 
 /*.doctor_img {*/
 /*width:10px;*/
@@ -296,44 +454,58 @@ textarea {
     /*width:10px;*/
     /*height: 15px;*/
 /*}*/
-.doctor_info {
-    width: 25%;
-    border: 1px solid black;
-    height: 230px;
-    float: left;
-    padding-left: 5px;
-    margin:10px 35px;
-}
-.userMsg {
-    float: left;
-    /*width: 500px;*/
-    margin: 10px;
-    border: 1px solid black;
-}
+/*.doctor_info {*/
+    /*width: 25%;*/
+    /*border: 1px solid black;*/
+    /*height: 230px;*/
+    /*float: left;*/
+    /*padding-left: 5px;*/
+    /*margin:10px 35px;*/
+/*}*/
+/*.userMsg {*/
+    /*float: left;*/
+    /*!*width: 500px;*!*/
+    /*margin: 10px;*/
+    /*border: 1px solid black;*/
+/*}*/
+/*.doctor_info {*/
+    /*width: 25%;*/
+    /*border: 1px solid black;*/
+    /*height: 230px;*/
+    /*float: left;*/
+    /*padding-left: 5px;*/
+    /*margin:10px 35px;*/
+/*}*/
+/*.userMsg {*/
+    /*float: left;*/
+    /*!*width: 500px;*!*/
+    /*margin: 10px;*/
+    /*border: 1px solid black;*/
+/*}*/
 
-.work_talk {
-    width: 650px;
-    line-height: 30px;
-    border: 1px solid gainsboro;
-    margin: 5px auto;
-}
-.work_list {
-    width: 700px;
-    height: 536px;
-    overflow: auto;
-    margin: 5px auto;
-    border: 1px solid gainsboro;
-}
-.work_item {
-    border: 1px solid black;
-    width: 600px;
-    margin: 5px auto;
-}
-.input_reply {
-    width: 563px;
-    margin: 5px 5px 0 0;
-}
-.reply_board {
-    width: 600px;
-    margin: 0 auto;
-}
+/*.work_talk {*/
+    /*width: 650px;*/
+    /*line-height: 30px;*/
+    /*border: 1px solid gainsboro;*/
+    /*margin: 5px auto;*/
+/*}*/
+/*.work_list {*/
+    /*width: 700px;*/
+    /*height: 536px;*/
+    /*overflow: auto;*/
+    /*margin: 5px auto;*/
+    /*border: 1px solid gainsboro;*/
+/*}*/
+/*.work_item {*/
+    /*border: 1px solid black;*/
+    /*width: 600px;*/
+    /*margin: 5px auto;*/
+/*}*/
+/*.input_reply {*/
+    /*width: 563px;*/
+    /*margin: 5px 5px 0 0;*/
+/*}*/
+/*.reply_board {*/
+    /*width: 600px;*/
+    /*margin: 0 auto;*/
+/*}*/

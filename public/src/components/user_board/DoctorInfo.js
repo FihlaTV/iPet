@@ -8,19 +8,25 @@ class DoctorInfo extends Component {
 
   render() {
     return (
-        <div className='doctor_info text-center'>
-          <ul>
-            <label>医生信息</label>
-            <li>
-              <img className='doctor_img' src={'/' + this.props.doctor.image} alt='医生图片'/>
-            </li>
-            <li>姓名:{this.props.doctor.doctor_name}</li>
-            <li>e-mail:{this.props.doctor.email}</li>
-            <li>科室:{this.props.doctor.type}</li>
-            <li>所在医院:{this.props.doctor.hospital}</li>
-            <li>级别:{this.props.doctor.certificates}</li>
-          </ul>
-        </div>);
+      <div className='doctor_info'>
+        <span className='info_title'>医生信息</span>
+        <ul>
+          <li className="doctor_img_li">
+            <img className='doctor_img' src={'/' + this.props.doctor.image} alt='医生图片'/>
+          </li>
+          <li>姓 名 : {this.props.doctor.doctor_name}</li>
+          <li>e-mail : {this.props.doctor.email}</li>
+          <li>科 室 : {this.props.doctor.type}</li>
+          <li>所在医院 : {this.props.doctor.hospital}</li>
+          <li>级 别 : {this.props.doctor.certificates}</li>
+          <li className="doctor_info_briefing">简介：毕业于北京大学生物科学专业,对于内科学有20年的临床经验，曾经在手术台上奋战8小时,救活了一名即将临盆的狗狗孕妇,
+            曾获得生物多样性研究大赛一等奖，获得过杰出的生物多样性保护者！</li>
+        </ul>
+        {/*<span className="doctor_info_briefing">简介：毕业于北京大学生物科学专业,对于内科学有20年的临床经验，曾经在手术台上奋战8小时,救活了一名即将临盆的狗狗孕妇,*/}
+          {/*曾获得生物多样性研究大赛一等奖，获得过杰出的生物多样性保护者！*/}
+        {/*</span>*/}
+      </div>
+    );
   }
 }
 
