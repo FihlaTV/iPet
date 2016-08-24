@@ -4,7 +4,7 @@
 import app from '../../app' ;
 import request from 'supertest';
 
-fdescribe('post /api/doctor_login', ()=> {
+describe('post /api/doctor_login', ()=> {
   it('should return statusCode 200 and doctorId', (done)=> {
     request(app)
         .post('/api/doctor_login')

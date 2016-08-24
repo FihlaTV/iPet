@@ -23,7 +23,6 @@ class Content extends Component {
   }
 
   handleSignInChange(){
-    console.log(this.refs.switch_btn.checked)
     return this.refs.switch_btn.checked;
   }
 

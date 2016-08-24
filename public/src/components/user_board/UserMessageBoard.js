@@ -22,8 +22,8 @@ class UserMessageBoard extends Component {
     if (user_input) {
       this.props.addUserMsg(user_input, this.props.messages.id);
     }
-
     this.refs.message.value = '';
+    this.refs.history.scrollTop = 10000;
   }
 
   render() {
@@ -39,9 +39,6 @@ class UserMessageBoard extends Component {
             }
           </div>
 
-          {/*<textarea id="sendMessage" ref="message"/><br/>*/}
-          {/*<input type="button" onClick={this.handleClick.bind(this)} value="提交"/>*/}
-          {/*<input type="button" value="结束对话"/>*/}
           <div className="inputMessageDiv">
             <span className="select_box"> 
               <img src="/images/67.gif" />
@@ -49,8 +46,6 @@ class UserMessageBoard extends Component {
               <img src="/images/webcam.png" />
             </span>
             <textarea className="inputMessage" id="inputMessage" ref="message"> </textarea>
-            {/*<input type="button" onClick={this.handleClick.bind(this)} value="提交"/>*/}
-            {/*<input type="button" value="结束对话"/>*/}
             <span className="sendMessage_btn" onClick={this.handleClick.bind(this)}>send</span>
           </div>
         </div>
