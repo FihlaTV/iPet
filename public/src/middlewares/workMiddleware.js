@@ -4,23 +4,21 @@
 import request from 'superagent';
 const workMiddleware = store=>next=>action=> {   // eslint-disable-line no-unused-vars
   switch (action.type) {
-    case 'GET_DOCTORID':
-      request
-          .get('/api/doctor_login/cookie')
-          .end((err, res)=> {
-            if(res.status === 200) {
-              store.dispatch({
-                type:'WORK_INIT',
-                doctorId:res.text
-              });
-            }
+  case 'GET_DOCTORID':
+    request
+        .get('/api/doctor_login/cookie')
+        .end((err, res)=> {
+          if (res.status === 200) {
             store.dispatch({
-              type: 'LOAD_WORK',
-              data: res.body
+              type: 'WORK_INIT',
+              doctorId: res.text
             });
-          });
-      break;
-    case 'WORK_INIT':
+          } else {
+            location.href = 'http://localhost:3000';
+          }
+        });
+    break;
+  case 'WORK_INIT':
     request
         .get('/api/messages/load_work')
         .query({
@@ -39,7 +37,7 @@ const workMiddleware = store=>next=>action=> {   // eslint-disable-line no-unuse
         .query({id: action.msg_id})
         .send(action.data)
         .end((err, res)=> {
-          store.dispatch({type: 'WORK_INIT'});
+          store.dispatch({type: 'GET_DOCTORID'});
           next({
             type: 'LOAD_DOCTOR_MSG',
             data: res.body
