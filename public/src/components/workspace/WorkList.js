@@ -10,9 +10,6 @@ class WorkList extends Component {
   componentWillMount() {
     this.props.workInit();
   }
-  componentDidUpdate() {
-    this.props.workInit();
-  }
 
   render() {
     let workspaceItems =  this.props.data ? this.props.data:[] ;
