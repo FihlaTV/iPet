@@ -19,7 +19,7 @@ class UserMessageBoard extends Component {
 
   handleClick() {
     let user_input = this.refs.message.value.trim();
-    if (user_input, this.props.messages.id) {
+    if (user_input) {
       this.props.addUserMsg(user_input, this.props.messages.id);
     }
 
@@ -34,11 +34,11 @@ class UserMessageBoard extends Component {
           <div className="all_message" ref="history">
             {
               talk.map((v, k)=>(
-                  <MsgItem key={k + 1} isQuestion={v.isQuestion} msg={v.msg}></MsgItem>
+                  <MsgItem key={k + 1} isQuestion={v.isQuestion} msg={v.msg}/>
               ))
             }
           </div>
-          <textarea id="sendMessage" ref="message"></textarea><br/>
+          <textarea id="sendMessage" ref="message"/><br/>
           <input type="button" onClick={this.handleClick.bind(this)} value="提交"/>
           <input type="button" value="结束对话"/>
         </div>
