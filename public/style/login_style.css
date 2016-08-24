@@ -140,7 +140,7 @@ body {
 .login_btn {
     width: 230px;
     height: 35px;
-    margin: 5px 0 0 24px;
+    margin: 20px 0 0 24px;
     border-radius: 5px;
     outline: none;
     font-size: 18px;
@@ -153,11 +153,70 @@ body {
     background: #6FA0AA;
     color: #fff;
 }
-
+/*******************************切换不同用户登录页面按钮**************************/
+.switch{
+    float: right;
+    margin-right: 70px;
+    margin-top: -30px;
+}
+.mui-switch {
+    width: 70px;
+    height: 29px;
+    position: relative;
+    border: 1px solid #dfdfdf;
+    background:url("/images/login_images/user.jpg");
+    background-size: cover;
+    box-shadow: #dfdfdf 0 0 0 0 inset;
+    border-radius: 20px;
+    background-clip: content-box;
+    display: inline-block;
+    -webkit-appearance: none;
+    user-select: none;
+    outline: none;
+    cursor:pointer;
+}
+.mui-switch:before {
+    content: '';
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); }
+.mui-switch:checked {
+    border-color: #fff;
+    box-shadow: #64bd63 0 0 0 16px inset;
+    background-color: #fff; }
+.mui-switch:checked:before {
+    left: 42px; }
+.mui-switch.mui-switch-animbg {
+    transition: background-color ease 0.4s; }
+.mui-switch.mui-switch-animbg:before {
+    transition: left 0.3s; }
+.mui-switch.mui-switch-animbg:checked {
+    box-shadow: #000 0 0 0 0 inset;
+    background:url("/images/login_images/doctor.jpg");
+    background-size: cover;
+    transition: border-color 0.4s, background-color ease 0.4s; }
+.mui-switch.mui-switch-animbg:checked:before {
+    transition: left 0.3s; }
+.mui-switch.mui-switch-anim {
+    transition: border cubic-bezier(0, 0, 0, 1) 0.4s, box-shadow cubic-bezier(0, 0, 0, 1) 0.4s; }
+.mui-switch.mui-switch-anim:before {
+    transition: left 0.3s; }
+.mui-switch.mui-switch-anim:checked {
+    box-shadow: #64bd63 0 0 0 16px inset;
+    background-color: #64bd63;
+    transition: border ease 0.4s, box-shadow ease 0.4s, background-color ease 1.2s; }
+.mui-switch.mui-switch-anim:checked:before {
+    transition: left 0.3s;
+}
 /*********************************用户注册**********************************/
 .user-login-ul #user-logup-li span {
     display: block;
-    width: 290px;
+    width: 300px;
     height: 50px;
     margin: 15px auto;
 }

@@ -115,8 +115,8 @@ export default {
       talk: [{
         isQuestion: true,
         msg: '问:你好?<br/>'
-      }, {
-        isQuestion: false,
+      },{
+        isQuestion: true,
         msg: '问:你好?'
       }]
     }, {
@@ -132,7 +132,7 @@ export default {
       userId: '47b2c7b9d8e1ecbf54300011',
       doctorId: '57b2c7b9d8e1ecbf54300010',
       talk: [{
-        isQuestion: true,
+        isQuestion: false,
         msg: '问:问题1?<br/>'
       }]
     }],
@@ -141,6 +141,5 @@ export default {
       _id: '57b2c7b9d8e1ecbf54300000',
       doctor_name: 'hanzi33',
       password: '111111'
-    }
-  ]
+    }]
 };
