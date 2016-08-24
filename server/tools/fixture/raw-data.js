@@ -119,7 +119,7 @@ export default {
         isQuestion: true,
         msg: '问:你好?<br/>'
       },{
-        isQuestion: false,
+        isQuestion: true,
         msg: '问:你好?'
       }]
     },
@@ -136,9 +136,26 @@ export default {
       userId: '47b2c7b9d8e1ecbf54300011',
       doctorId: '57b2c7b9d8e1ecbf54300010',
       talk: [{
-        isQuestion: true,
+        isQuestion: false,
         msg: '问:问题1?<br/>'
       }]
-    }
+    },
+    { _id:'57b6815bf8885d021d874328',
+      userId: '47b2c7b9d8e1ecbf54300011',
+      doctorId: '57b2c7b9d8e1ecbf54300000',
+      talk: [{
+        isQuestion: true,
+        msg: '问:1111?<br/>'
+      },{
+        isQuestion: true,
+        msg: '问:11111111?'
+      },{
+        isQuestion: false,
+        msg: '11111111111111111'
+      },{
+        isQuestion: true,
+        msg: '111111111111<br/>'
+      }]
+    },
   ]
 };
