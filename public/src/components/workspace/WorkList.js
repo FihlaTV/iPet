@@ -3,8 +3,7 @@
  */
 
 import React, {Component} from 'react';//eslint-disable-line no-unused-vars
-// import WorkItem from './WorkItem';
-import WorkItem from '../../container/DoctorWorkItem';
+import WorkItem from './WorkItem';
 class WorkList extends Component {
 
   componentWillMount() {
@@ -18,7 +17,7 @@ class WorkList extends Component {
         <div className="work_list">
           {
             workspaceItems.map((v, k)=> (
-              <WorkItem key={k}  msg_id={v._id} />
+              <WorkItem key={k} talk={v.talk} msg_id={v._id} addDoctorMsg={this.props.addDoctorMsg}/>
             ))
           }
         </div>
