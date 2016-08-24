@@ -28,10 +28,11 @@ class Content extends Component {
       username: this.refs.username.value,
       password: this.refs.password.value
     };
+    let loginType = '';
     if (!this.checkedEmpty(data) || !this.checkedScheme(data)) {
       return;
     }
-    this.props.loginTodo(data);
+    this.props.loginTodo(data, loginType);
   }
 
   handleLoginClick() {
@@ -51,7 +52,9 @@ class Content extends Component {
       loginNav.className = '';
     }
   }
-
+  handleSignInChange(){
+    console.log(this.refs.switch_btn.checked);
+  }
   componentDidUpdate() {
     if (this.props.user_login.loginSuccess) {
       location.href = '/home';
@@ -82,14 +85,16 @@ class Content extends Component {
         <img src='images/login_images/mima.png'/>
         <input type='password' ref='password' placeholder='密码'/>
         </span>
-              <div className='remeber_password'>
-                <span className='remeber_password_span'><input type='checkbox' name='remeber_password'/> 记住密码 </span>
-              </div>
-              <span className='login_btn_span'>
+              
+        <label className="switch">
+          <input ref="switch_btn" onChange={this.handleSignInChange.bind(this)} className="mui-switch mui-switch-animbg" type="checkbox" />
+        </label>
+
+        <span className='login_btn_span'>
         <button className='login_btn' onClick={this.handleClick.bind(this)}>登录</button>
-    </span>
-            </li>
-            <li id='user-logup-li' style={{display: (this.props.isLogin) ? 'none' : 'block'}}>
+        </span>
+        </li>
+        <li id='user-logup-li' style={{display: (this.props.isLogin) ? 'none' : 'block'}}>
         <span>
         <input type='text' placeholder='请输入用户名'/>
         <img src='images/login_images/user.png'/>

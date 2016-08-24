@@ -3,10 +3,12 @@ import rawData from './fixture/raw-data';
 import Doctor from '../models/Doctor';
 import User from '../models/User';
 import Message from '../models/Message';
+import DoctorLogin from '../models/DoctorLogin';
 const modelsMap = {
   Doctor,
   User,
-  Message
+  Message,
+  DoctorLogin
 };
 
 let docs = Object.keys(rawData);

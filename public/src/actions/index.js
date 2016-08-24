@@ -1,4 +1,5 @@
-export const loginTodo = (data)=> ({
+export const loginTodo = (data, loginType)=> ({
   type: 'LOGIN',
-  data
+  data,
+  loginType
 });

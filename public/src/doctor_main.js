@@ -9,7 +9,7 @@ import workMiddleware from './middlewares/workMiddleware';
 
 const store = createStore(
     workspaceItems,
-    applyMiddleware(createLogger(),workMiddleware)
+    applyMiddleware(createLogger(), workMiddleware)
 );
 
 render(

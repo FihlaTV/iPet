@@ -87,8 +87,7 @@ export default {
     type: '内科',
     hospital: '北京动物医院',
     certificates: '中级'
-  }
-  ],
+  }],
   User: [
     {
       _id: '47b2c7b9d8e1ecbf54300010',
@@ -96,23 +95,21 @@ export default {
       password: '123456',
       email: '515161153@qq.com',
       description: 'lol i love dog'
-    },
-    {
+    }, {
       _id: '47b2c7b9d8e1ecbf54300011',
       username: 'hanzi22',
       password: '123456',
       email: '515161153@qq.com',
       description: 'lol i love dog'
-    },
-    {
+    }, {
       _id: '47b2c7b9d8e1ecbf54300012',
       username: 'hanzi12',
       password: '123456',
       email: '515161153@qq.com'
     }],
-
   Message: [
-    { _id:'57b6815bf8885d021d874325',
+    {
+      _id: '57b6815bf8885d021d874325',
       userId: '47b2c7b9d8e1ecbf54300011',
       doctorId: '57b2c7b9d8e1ecbf54300000',
       talk: [{
@@ -122,40 +119,27 @@ export default {
         isQuestion: true,
         msg: '问:你好?'
       }]
-    },
-    { _id:'57b6815bf8885d021d874320',
+    }, {
+      _id: '57b6815bf8885d021d874320',
       userId: '47b2c7b9d8e1ecbf54300012',
       doctorId: '57b2c7b9d8e1ecbf54300000',
       talk: [{
         isQuestion: true,
         msg: '问:你好?2222'
       }]
-    },
-    {
-      _id:'57b6815bf8885d021d874327',
+    }, {
+      _id: '57b6815bf8885d021d874327',
       userId: '47b2c7b9d8e1ecbf54300011',
       doctorId: '57b2c7b9d8e1ecbf54300010',
       talk: [{
         isQuestion: false,
         msg: '问:问题1?<br/>'
       }]
-    },
-    { _id:'57b6815bf8885d021d874328',
-      userId: '47b2c7b9d8e1ecbf54300011',
-      doctorId: '57b2c7b9d8e1ecbf54300000',
-      talk: [{
-        isQuestion: true,
-        msg: '问:1111?<br/>'
-      },{
-        isQuestion: true,
-        msg: '问:11111111?'
-      },{
-        isQuestion: false,
-        msg: '11111111111111111'
-      },{
-        isQuestion: true,
-        msg: '111111111111<br/>'
-      }]
-    },
-  ]
+    }],
+  DoctorLogin: [
+    {
+      _id: '57b2c7b9d8e1ecbf54300000',
+      doctor_name: 'hanzi33',
+      password: '111111'
+    }]
 };
