@@ -30,6 +30,17 @@ const workMiddleware = store=>next=>action=> {// eslint-disable-line no-unused-v
             });
           });
       break;
+    case 'WORK_MSG_INIT':
+      request.get('/api/messages/load_msg')
+          .query({
+            msg_id: action.msg_id,
+          }).end((err, res)=> {
+        next({
+          type: 'LOAD_WORK_MSG',
+          data: res.body
+        });
+      });
+      break;
   }
   next(action);
 };

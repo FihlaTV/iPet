@@ -32,10 +32,17 @@ router.get('/load', (req, res)=> {
   });
 });
 
-router.get('/load_work',(req,res)=>{
+router.get('/load_msg', (req, res)=> {
+  Message.findById(req.query.msg_id, (err, message)=> {
+    res.send(msg);
+  });
+});
+
+
+router.get('/load_work', (req, res)=> {
   Message.find({
-    doctorId:req.query.doctorId
-  },(err,data)=>{
+    doctorId: req.query.doctorId
+  }, (err, data)=> {
     res.send(data);
   });
 });

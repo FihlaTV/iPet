@@ -7,6 +7,10 @@ import MsgItem from './../user_board/MsgItem';
 
 class WorkItem extends Component {
 
+  componentWillMount() {
+    this.props.workMsgInit(this.props.msg_id);
+  }
+
   handleClick() {
     let doctor_input = this.refs.msg.value.trim();
     if (doctor_input !== '') {
@@ -15,7 +19,8 @@ class WorkItem extends Component {
   }
 
   render() {
-    let {talk} = this.props;
+    let {talk} = this.props.workItem.talk;
+    console.log(this.props.workItem.talk);
     return (
         <div>
           {
