@@ -2,7 +2,7 @@ import request from 'superagent';
 const userLoginMiddleware = store=>next=>action=> {// eslint-disable-line no-unused-vars
   switch (action.type) {
   case 'LOGIN':
-    if(action.loginType === 'user') {
+    if(action.loginType === false) {
       request.post('/api/login')
           .type('form')
           .send({

@@ -22,13 +22,18 @@ class Content extends Component {
     return true;
   }
 
+  handleSignInChange(){
+    console.log(this.refs.switch_btn.checked)
+    return this.refs.switch_btn.checked;
+  }
+
   handleClick() {
 
     let data = {
       username: this.refs.username.value,
       password: this.refs.password.value
     };
-    let loginType = '';
+    let loginType = this.handleSignInChange();
     if (!this.checkedEmpty(data) || !this.checkedScheme(data)) {
       return;
     }
@@ -52,9 +57,7 @@ class Content extends Component {
       loginNav.className = '';
     }
   }
-  handleSignInChange(){
-    console.log(this.refs.switch_btn.checked);
-  }
+
   componentDidUpdate() {
     if (this.props.user_login.loginSuccess) {
       location.href = '/home';
