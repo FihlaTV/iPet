@@ -23,7 +23,13 @@ const userLoginMiddleware = store=>next=>action=> {// eslint-disable-line no-unu
             password: action.data.password
           })
           .end((err, res)=> {
-            console.log(res.status);
+            if(res.status === 200) {
+              location.href = 'http://localhost:3000/work_index.html';
+            }
+            else {
+
+            }
+            //console.log(res.status);
           });
     }
 
