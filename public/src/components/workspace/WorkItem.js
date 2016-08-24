@@ -14,7 +14,6 @@ class WorkItem extends Component {
     }
   }
 
-
   render() {
     let {talk} = this.props;
     return (
