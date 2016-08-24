@@ -7,7 +7,8 @@ import WorkItem from './WorkItem';
 class WorkList extends Component {
 
   componentWillMount() {
-    this.props.workInit();
+    // this.props.workInit();
+    this.props.getDoctorId();
   }
 
   render() {
