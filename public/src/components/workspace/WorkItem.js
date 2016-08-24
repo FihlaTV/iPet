@@ -6,6 +6,7 @@ import React, {Component} from 'react';//eslint-disable-line no-unused-vars
 import MsgItem from './../user_board/MsgItem';
 
 class WorkItem extends Component {
+
   handleClick() {
     let doctor_input = this.refs.msg.value.trim();
     if (doctor_input !== '') {
