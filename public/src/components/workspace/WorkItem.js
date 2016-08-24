@@ -16,12 +16,10 @@ class WorkItem extends Component {
     if (doctor_input !== '') {
       this.props.addDoctorMsg(doctor_input, this.props.msg_id);
     }
-
   }
 
   render() {
     let {talk} = this.props.workItem.talk;
-    console.log(this.props.workItem.talk);
     return (
       <div>
         {
