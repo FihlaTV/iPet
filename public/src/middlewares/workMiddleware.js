@@ -23,7 +23,7 @@ const workMiddleware = store=>next=>action=> {   // eslint-disable-line no-unuse
           .query({id: action.msg_id})
           .send(action.data)
           .end((err, res)=> {
-      git       store.dispatch({type:'WORK_INIT'})
+            store.dispatch({type:'WORK_INIT'})
             next({
               type: 'LOAD_DOCTOR_MSG',
               data: res.body
