@@ -376,6 +376,12 @@ li {
     margin-left: 5px;
     color:#000066;
 }
+.user_board .all_message .every_question pre{
+    width: 300px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+
+}
 .user_board .all_message .every_question .question{
     border-radius: 4px;
     margin: 2px 0 0 3px;
@@ -383,7 +389,13 @@ li {
     font-size: 16px;
     color:#0f0f0f;
 }
-.user_board .inputMessageDiv{
+.user_board .all_message .doctor + .question{
+    float: right;
+}
+.user_board .all_message .patient + .question{
+    float: left;
+}
+ .inputMessageDiv{
     width: 100%;
     height: 200px;
     /*background: #b9def0;*/
@@ -391,18 +403,18 @@ li {
     border-bottom-left-radius:7px;
     border-bottom-right-radius:7px;
 }
-.user_board .inputMessageDiv .select_box{
+ .inputMessageDiv .select_box{
     width: 100%;
     height:40px;
     display: block;
 }
-.user_board .inputMessageDiv .select_box img{
+ .inputMessageDiv .select_box img{
     width: 20px;
     height:20px;
     margin: 10px 0 0 25px;
     cursor:pointer;
 }
-.user_board .inputMessageDiv .inputMessage{
+ .inputMessageDiv .inputMessage{
     width: 90%;
     height:120px;
     resize: none;
@@ -410,7 +422,7 @@ li {
     margin-left: 20px;
     border-radius: 4px;
 }
-.user_board .inputMessageDiv .sendMessage_btn{
+ .sendMessage_btn{
     width: 80px;
     height:30px;
     display: block;
@@ -426,12 +438,110 @@ li {
     cursor:pointer;
     margin-top: -3px;
 }
-.user_board .inputMessageDiv .sendMessage_btn:hover{
+ .sendMessage_btn:hover{
     background: #00b3ee;
 }
-.user_board .inputMessageDiv .sendMessage_btn:active{
+ .sendMessage_btn:active{
     background: #7ccccd;
 }
+
+
+
+/***********************医生聊天页面样式*******************************/
+.doctor_conversion_box{
+    width: 1230px;
+    height:680px;
+    margin: 5px auto 5px;
+}
+
+.doctor_conversion_box .doctor_info{
+    width: 350px;
+    height: 100%;
+    background: #fff;
+    border-radius: 7px;
+    float: left;
+    overflow: hidden;
+}
+.doctor_conversion_box .doctor_info .doctorInfo_bg{
+    margin-top:30px;
+}
+.work_list{
+    width: 850px;
+    height: 100%;
+    float: left;
+    margin-left: 30px;
+    overflow-y: scroll;
+    border-radius: 7px;
+}
+.work_item{
+    width: 830px;
+    border: 1px solid #c7ddef;
+    margin-bottom: 35px;
+    border-radius: 7px;
+    background: #fff;
+}
+.work_item .doctor_conversion_title{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-indent: 10px;
+    border-bottom:1px solid #e0e0e0 ;
+    border-top-left-radius:7px;
+    border-top-right-radius:7px;
+}
+
+.work_item .inputMessageDiv .inputMessage{
+    width: 600PX;
+    height: 90px;
+}
+.work_item .inputMessageDiv .sendMessage_btn{
+
+    margin:10px 215px 0 0;
+
+}
+.work_item .inputMessageDiv{
+    border-top:1px solid #e0e0e0;
+}
+
+.work_item .every_question{
+    width:300px;
+    margin-bottom: 20px;
+    word-break:break-all;
+    font-size: 17px;
+    margin-left: 5px;
+    color:#000066;
+}
+.work_item .all_message .every_question pre{
+    width: 300px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+
+}
+.work_item .every_question .question{
+    border-radius: 4px;
+    margin: 2px 0 0 3px;
+    background: #e0e0e0;
+    font-size: 16px;
+    color:#0f0f0f;
+}
+.work_item .doctor+ .question{
+    float: left;
+}
+.work_item .patient+.question{
+    float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

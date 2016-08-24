@@ -11,9 +11,11 @@ class MsgItem extends Component {
       return (<span> </span>);
     }
     return (
-     <pre className="every_question">
-       {isQuestion ? '病人'+' '+nowDate : '医生'+' '+nowDate}:<br /><div className="question">{msg}</div>
+        <div className="every_question">
+     <pre >
+       {isQuestion ? <div className="patient">{'病人'+' '+nowDate}</div> : <div className="doctor">{'医生'+' '+nowDate}</div>}<br /><div className="question">{msg}</div>
      </pre>
+        </div>
     );
   }
 }

@@ -24,6 +24,7 @@ const workMiddleware = store=>next=>action=> {// eslint-disable-line no-unused-v
           .query({id: action.msg_id})
           .send(action.data)
           .end((err, res)=> {
+
             next({
               type: 'LOAD_DOCTOR_MSG',
               data: res.body

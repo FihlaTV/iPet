@@ -11,7 +11,7 @@ class WorkList extends Component {
     this.props.workInit();
   }
   componentDidUpdate() {
-    this.props.workInit();
+    //this.props.workInit();
   }
 
   render() {
