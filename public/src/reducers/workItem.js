@@ -3,11 +3,11 @@
  */
 const workItem = (state = {}, action)=> {
   switch (action.type) {
-    case 'LOAD_WORK_MSG':
-      return {
-        id:action.data._id,
-        talk:action.data.talk
-      };
+  case 'LOAD_WORK_MSG':
+    return {
+      id:action.data._id,
+      talk:action.data.talk
+    };
 
   }
   return state;
