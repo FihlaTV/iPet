@@ -18,6 +18,18 @@ const workMiddleware = store=>next=>action=> {// eslint-disable-line no-unused-v
             });
           });
       break;
+    case 'ADD_DOCTOR_MSG':
+      request.put('/api/messages')
+          .type('form')
+          .query({id: action.msg_id})
+          .send(action.data)
+          .end((err, res)=> {
+            next({
+              type: 'LOAD_DOCTOR_MSG',
+              data: res.body
+            });
+          });
+      break;
   }
   next(action);
 };
