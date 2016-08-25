@@ -4,6 +4,7 @@ import doctor from './doctor';
 import user_login from './login';
 import messages from './messages';
 import isLogin from './switchLoginAndSignin';
+import isSignIn from './signIn';
 
 const resultList = combineReducers({
   doctors,
@@ -11,6 +12,7 @@ const resultList = combineReducers({
   user_login,
   messages,
   isLogin,
+  isSignIn
 
 });
 export default resultList;

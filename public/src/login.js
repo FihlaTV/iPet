@@ -6,10 +6,13 @@ import {createStore, applyMiddleware} from 'redux';
 import {Provider} from 'react-redux';
 import user_login from './reducers/index';
 import LoginView from './container/login';
+import userSignInMiddleware from './middlewares/userSignInMiddleware';
+import createLogger from 'redux-logger';
 
 const store = createStore(
     user_login,
-    applyMiddleware(userLoginMiddleware)
+    applyMiddleware(createLogger(),userLoginMiddleware,userSignInMiddleware)
+
 );
 
 store.dispatch({

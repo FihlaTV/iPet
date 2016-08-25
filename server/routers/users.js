@@ -40,4 +40,25 @@ router.get('/cookie', (req, res)=> {
 
 });
 
+router.post('/signIn', (req, res)=> {
+  let username = req.body.username;
+  let password = req.body.password;
+  let email = req.body.email;
+
+  User.findOne({username: username}, (err, user) => {
+    if (user) {
+      res.send(false);
+    } else {
+      new User({
+        username: username,
+        password: password,
+        email: email,
+      }).save((err, result) => {
+        res.send(true);
+      });
+    }
+  });
+
+});
+
 module.exports = router;
