@@ -12,9 +12,9 @@ router.post('/', (req, res)=> {
   }, (err, data)=> {
 
     if (data !== null) {
-      let sessionId = uuid.v4();
-      sessionMap.push({sessionId, doctorId: data._id});
-      res.cookie('sessionId', sessionId);
+      let doctorCookie = uuid.v4();
+      sessionMap.push({doctorCookie, doctorId: data._id});
+      res.cookie('doctorCookie', doctorCookie);
       res.status(200).send(data._id);
     } else {
       res.sendStatus(403);
@@ -25,10 +25,10 @@ router.post('/', (req, res)=> {
 
 
 router.get('/cookie', (req, res)=> {
-  let sessionId = req.cookies.sessionId;
+  let sessionId = req.cookies.doctorCookie;
 
   let exit = sessionMap.find((session)=> {
-    return sessionId === session.sessionId;
+    return sessionId === session.doctorCookie;
   });
   if (exit) {
     res.status(200);
