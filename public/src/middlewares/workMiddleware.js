@@ -14,7 +14,7 @@ const workMiddleware = store=>next=>action=> {   // eslint-disable-line no-unuse
               doctorId: res.text
             });
           } else {
-            location.href = 'http://localhost:3000';
+            //location.href = 'http://localhost:3000';
           }
         });
     break;
