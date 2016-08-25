@@ -90,16 +90,19 @@ export default {
   }],
   User: [
     {
+      _id: '47b2c7b9d8e1ecbf54300011',
       username: 'hanzi1',
       password: '123456',
       email: '515161153@qq.com',
       description: 'lol i love dog'
     }, {
+      _id: '47b2c7b9d8e1ecbf54300012',
       username: 'hanzi22',
       password: '123456',
       email: '515161153@qq.com',
       description: 'lol i love dog'
     }, {
+      _id: '47b2c7b9d8e1ecbf54300013',
       username: 'hanzi12',
       password: '123456',
       email: '515161153@qq.com'
