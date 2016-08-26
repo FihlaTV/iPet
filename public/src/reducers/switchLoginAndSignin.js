@@ -4,7 +4,7 @@
 const switchLoginAndSignIn = (state = true, action)=> {
   switch (action.type) {
   case 'SHOW_LOGIN_BOARD':
-    return action.text === 'login' ? true : false;
+    return action.text === 'login';
   }
   return state;
 };

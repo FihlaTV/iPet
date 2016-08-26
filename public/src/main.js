@@ -16,10 +16,11 @@ import {Provider} from 'react-redux';
 import doctorsRequestMiddleware from './middlewares/doctorsRequestMiddleware';
 import doctorRequestMiddleware from './middlewares/doctorRequestMiddleware';
 import userRequestMiddleware from './middlewares/userRequestMiddleware';
+import addUserMiddleware from './middlewares/addUserMiddleware';
 
 const store = createStore(
     doctorList,
-    applyMiddleware(createLogger(), doctorsRequestMiddleware, doctorRequestMiddleware,userRequestMiddleware)
+    applyMiddleware(createLogger(), doctorsRequestMiddleware, doctorRequestMiddleware,userRequestMiddleware,addUserMiddleware)
 );
 
 store.dispatch({

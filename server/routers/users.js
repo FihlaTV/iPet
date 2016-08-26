@@ -53,7 +53,7 @@ router.post('/signIn', (req, res)=> {
         username: username,
         password: password,
         email: email,
-      }).save((err, result) => {
+      }).save((err, result) => { // eslint-disable-line no-unused-vars
         res.send(true);
       });
     }

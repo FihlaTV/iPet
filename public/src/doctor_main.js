@@ -6,10 +6,11 @@ import createLogger from 'redux-logger';
 import {createStore, applyMiddleware} from 'redux';
 import {Provider} from 'react-redux';
 import workMiddleware from './middlewares/workMiddleware';
+import addDoctorMiddleware from './middlewares/addDoctorMIddleware';
 
 const store = createStore(
     workspaceItems,
-    applyMiddleware(createLogger(), workMiddleware)
+    applyMiddleware(createLogger(), workMiddleware,addDoctorMiddleware)
 );
 
 render(

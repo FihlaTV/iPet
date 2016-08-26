@@ -14,7 +14,7 @@ const workMiddleware = store=>next=>action=> {   // eslint-disable-line no-unuse
               doctorId: res.text
             });
           } else {
-            //location.href = 'http://localhost:3000';
+            location.href = 'http://localhost:3000';
           }
         });
     break;
@@ -27,19 +27,6 @@ const workMiddleware = store=>next=>action=> {   // eslint-disable-line no-unuse
         .end((err, res)=> {
           store.dispatch({
             type: 'LOAD_WORK',
-            data: res.body
-          });
-        });
-    break;
-  case 'ADD_DOCTOR_MSG':
-    request.put('/api/messages')
-        .type('form')
-        .query({id: action.msg_id})
-        .send(action.data)
-        .end((err, res)=> {
-          store.dispatch({type: 'GET_DOCTORID'});
-          next({
-            type: 'LOAD_DOCTOR_MSG',
             data: res.body
           });
         });

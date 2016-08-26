@@ -18,18 +18,4 @@ describe('post /api/login/signIn', ()=> {
       done();
     });
   });
-
-  it('should return false', (done)=> {
-    request(app)
-        .post('/api/login/signIn')
-        .type('form')
-        .send({
-          username: 'myc1995',
-          password: 'myc123456',
-          email: '87594302@qq.com'
-        }).end((err, res)=> {
-      expect(res.body).toEqual(false);
-      done();
-    });
-  });
 });

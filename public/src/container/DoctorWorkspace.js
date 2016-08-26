@@ -3,7 +3,6 @@
  */
 import {connect} from 'react-redux';
 import WorkList from '../components/workspace/WorkList';
-import {workInit} from '../actions/workInit';
 import {getDoctorId} from '../actions/getDoctorId';
 import {addDoctorMsg} from '../actions/addDoctorMsgAction';
 
@@ -13,9 +12,6 @@ const mapDispatchToProps = (dispatch)=>({
   addDoctorMsg: (text, msg_id)=> {
     dispatch(addDoctorMsg(text,msg_id));
   },
-  // workInit: ()=> {
-  //   dispatch(workInit());
-  // },
   getDoctorId: ()=>{
     dispatch(getDoctorId());
   }
